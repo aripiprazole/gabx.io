@@ -7,7 +7,9 @@ import Image from 'next/image';
 import {FiAtSign, FiBook, FiHome, FiPackage, FiUser} from 'react-icons/fi';
 
 import styled from 'styled-components';
+
 import Navbar from '~/components/Navbar/Navbar';
+import Posts from '~/components/Posts/Posts';
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +21,28 @@ const Home: NextPage = () => {
       </Head>
 
       <Waves>
-        <div className='shape' />
+        <main>
+          <Avatar>
+            <div>
+              <Image
+                src='/avatar.jpeg'
+                alt='Gabrielle'
+                width={200}
+                height={200}
+              />
+            </div>
+          </Avatar>
+
+          <Navbar
+            routes={[
+              {path: '#', icon: FiHome, title: 'Home'},
+              {path: '#posts', icon: FiBook, title: 'Posts'},
+              {path: '#projects', icon: FiPackage, title: 'Projects'},
+              {path: '#social', icon: FiAtSign, title: 'Social'},
+              {path: '#contact', icon: FiUser, title: 'Contact'},
+            ]}
+          />
+        </main>
 
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           {/* eslint-disable-next-line max-len */}
@@ -34,26 +57,6 @@ const Home: NextPage = () => {
       </Waves>
 
       <Main>
-        <Avatar>
-          <div>
-            <Image
-              src='/avatar.jpeg'
-              alt='Gabrielle'
-              width={200}
-              height={200}
-            />
-          </div>
-        </Avatar>
-
-        <Navbar
-          routes={[
-            {path: '#', icon: FiHome, title: 'Home'},
-            {path: '#posts', icon: FiBook, title: 'Posts'},
-            {path: '#projects', icon: FiPackage, title: 'Projects'},
-            {path: '#social', icon: FiAtSign, title: 'Social'},
-            {path: '#contact', icon: FiUser, title: 'Contact'},
-          ]}
-        />
       </Main>
     </Container>
   );
@@ -62,7 +65,6 @@ const Home: NextPage = () => {
 const Container = styled.div``;
 
 const Waves = styled.div`
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -70,20 +72,21 @@ const Waves = styled.div`
   z-index: 0;
   line-height: 0;
   
-  svg {
+  > svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 144px;
   }
   
-  .shape {
-    height: 32rem;
+  > main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    min-height: 32rem;
+    padding: 2rem;
     background: #4842f5;
-
-    @media(max-width: 600px) {
-      height: 64rem;
-    }
   }
   
   .shape-fill {
