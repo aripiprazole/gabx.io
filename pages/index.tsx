@@ -80,7 +80,7 @@ const NavBar = styled.nav`
     a {
       text-decoration: none;
       color: #333;
-      font-size: 1.2rem;
+      font-size: 1.025rem;
       
       text-transform: uppercase;
       

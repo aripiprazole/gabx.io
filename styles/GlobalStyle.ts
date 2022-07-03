@@ -1,6 +1,8 @@
 import {createGlobalStyle} from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap');
+  
   :root {
     --background: #f3f3f3;
   }
@@ -12,10 +14,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   *, input, button, select, textarea, optgroup, option {
-    font-family: -apple-system, 'Montserrat', BlinkMacSystemFont,
-      'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
