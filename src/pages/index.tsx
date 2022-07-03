@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Gabrielle&apos;s Blog</title>
         <meta name='description' content="Gabrielle's blog" />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/public/favicon.ico' />
       </Head>
 
       <Main>
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <NavBar>
           <ul>
             <li>
-              <Link href='/'>
+              <Link href='#'>
                 <a><FiHome size={18} /> Home</a>
               </Link>
             </li>
