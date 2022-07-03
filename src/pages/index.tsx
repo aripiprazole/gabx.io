@@ -21,7 +21,12 @@ const Home: NextPage = () => {
       <Main>
         <Avatar>
           <div>
-            <Image src='/avatar.png' alt='Gabrielle' width={200} height={200} />
+            <Image
+              src='/avatar.jpeg'
+              alt='Gabrielle'
+              width={200}
+              height={200}
+            />
           </div>
         </Avatar>
 
