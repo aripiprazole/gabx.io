@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import {FiAtSign, FiBook, FiHome, FiPackage} from 'react-icons/fi';
+import {FiAtSign, FiBook, FiHome, FiPackage, FiUser} from 'react-icons/fi';
 
 import styled from 'styled-components';
 
@@ -66,8 +66,14 @@ const Home: NextPage = () => {
             </li>
 
             <li>
+              <Link href='#social'>
+                <a><FiAtSign size={18} /> Social</a>
+              </Link>
+            </li>
+
+            <li>
               <Link href='#contact'>
-                <a><FiAtSign size={18} />Contact</a>
+                <a><FiUser size={18} /> Contact</a>
               </Link>
             </li>
           </ul>
