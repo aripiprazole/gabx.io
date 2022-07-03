@@ -2,12 +2,12 @@ import React from 'react';
 
 import type {NextPage} from 'next';
 import Head from 'next/head';
-
-import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import {FiAtSign, FiBook, FiHome, FiPackage} from 'react-icons/fi';
+
+import styled from 'styled-components';
 
 const Home: NextPage = () => {
   return (
