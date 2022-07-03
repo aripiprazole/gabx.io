@@ -1,8 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap');
-  
   :root {
     --background: #f3f3f3;
   }
@@ -19,6 +17,10 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
   
+  html, body, #root {
+    background: var(--background);
+  }
+  
   html,
   body,
   #root,
@@ -27,7 +29,6 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     min-width: 25.625rem;
     font-size: 14px;
-    background: var(--background);
   }
   
   *:focus {
