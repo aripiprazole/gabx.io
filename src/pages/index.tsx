@@ -115,7 +115,7 @@ const Avatar = styled.div`
   
   img {
     border-radius: 1rem;
-    border: 1px solid #333 !important;
+    border: 1px solid #f3f3f3 !important;
   }
 `;
 
