@@ -80,6 +80,10 @@ const Waves = styled.div`
   .shape {
     height: 32rem;
     background: #4842f5;
+
+    @media(max-width: 600px) {
+      height: 64rem;
+    }
   }
   
   .shape-fill {
@@ -88,7 +92,6 @@ const Waves = styled.div`
 `;
 
 const Main = styled.main`
-  width: 45rem;
   margin: auto;
   
   padding: 8rem 1rem;
