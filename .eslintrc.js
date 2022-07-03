@@ -15,7 +15,8 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
-    'react/prop-types': [0],
+    'react/prop-types': ['off'],
+    'spaced-comment': ['off'],
   },
 };
 
