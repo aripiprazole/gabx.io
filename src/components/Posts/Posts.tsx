@@ -10,7 +10,7 @@ import {
   Post,
   Main,
   ReadMore,
-  Spacing,
+  Separator,
   ViewAll,
   Footer,
   ReadMoreButton,
@@ -56,7 +56,7 @@ const Posts = ({posts}: PostsProps) => {
         </ul>
       </Main>
 
-      <Spacing />
+      <Separator />
 
       <CategorySidebar>
         <Title>Categories</Title>

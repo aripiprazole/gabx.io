@@ -125,8 +125,8 @@ export const ReadMoreButton = styled.button`
   }
 `;
 
-export const Spacing = styled.span`
-  background: #8c8c8c;
+export const Separator = styled.span`
+  background: #4842f5;
 `;
 
 export const CategorySidebar = styled.nav`
