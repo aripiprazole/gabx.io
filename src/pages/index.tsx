@@ -11,6 +11,9 @@ import styled from 'styled-components';
 import Navbar from '~/components/Navbar/Navbar';
 import Posts from '~/components/Posts/Posts';
 
+// eslint-disable-next-line max-len
+const PREVIEW = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum';
+
 const Home: NextPage = () => {
   return (
     <Container>
@@ -21,28 +24,30 @@ const Home: NextPage = () => {
       </Head>
 
       <Waves>
-        <main>
-          <Avatar>
-            <div>
-              <Image
-                src='/avatar.jpeg'
-                alt='Gabrielle'
-                width={200}
-                height={200}
-              />
-            </div>
-          </Avatar>
+        <div className='container'>
+          <main>
+            <Avatar>
+              <div>
+                <Image
+                  src='/avatar.jpeg'
+                  alt='Gabrielle'
+                  width={200}
+                  height={200}
+                />
+              </div>
+            </Avatar>
 
-          <Navbar
-            routes={[
-              {path: '#', icon: FiHome, title: 'Home'},
-              {path: '#posts', icon: FiBook, title: 'Posts'},
-              {path: '#projects', icon: FiPackage, title: 'Projects'},
-              {path: '#social', icon: FiAtSign, title: 'Social'},
-              {path: '#contact', icon: FiUser, title: 'Contact'},
-            ]}
-          />
-        </main>
+            <Navbar
+              routes={[
+                {path: '#', icon: FiHome, title: 'Home'},
+                {path: '#posts', icon: FiBook, title: 'Posts'},
+                {path: '#projects', icon: FiPackage, title: 'Projects'},
+                {path: '#social', icon: FiAtSign, title: 'Social'},
+                {path: '#contact', icon: FiUser, title: 'Contact'},
+              ]}
+            />
+          </main>
+        </div>
 
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           {/* eslint-disable-next-line max-len */}
@@ -57,6 +62,12 @@ const Home: NextPage = () => {
       </Waves>
 
       <Main>
+        <Posts
+          posts={[
+            {title: 'Simple', preview: PREVIEW, simple: true},
+            {title: 'Hello world', preview: PREVIEW},
+          ]}
+        />
       </Main>
     </Container>
   );
@@ -79,14 +90,21 @@ const Waves = styled.div`
     height: 144px;
   }
   
-  > main {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    
-    min-height: 32rem;
-    padding: 2rem;
+  .container {
     background: #4842f5;
+
+    > main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      width: 100%;
+      max-width: 1068px;
+      min-height: 32rem;
+      
+      padding: 8rem 2rem;
+      margin: auto;
+    }
   }
   
   .shape-fill {
@@ -95,9 +113,11 @@ const Waves = styled.div`
 `;
 
 const Main = styled.main`
+  width: 100%;
+  max-width: 1068px;
+
   margin: auto;
-  
-  padding: 8rem 1rem;
+  padding: 1rem;
   
   position: relative;
   z-index: 2;
