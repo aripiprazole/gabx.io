@@ -27,6 +27,12 @@ const PostPreview = ({posts}: PostPreviewProps) => {
             </li>
           ))}
         </ul>
+
+        <Footer>
+          <Link href='/posts'>
+            <ViewAll><FiArrowRight /> View all posts...</ViewAll>
+          </Link>
+        </Footer>
       </Main>
 
       <Categories
@@ -41,12 +47,6 @@ const PostPreview = ({posts}: PostPreviewProps) => {
           'Minecraft Mods',
         ]}
       />
-
-      <Footer>
-        <Link href='/posts'>
-          <ViewAll><FiArrowRight /> View all posts...</ViewAll>
-        </Link>
-      </Footer>
     </Container>
   );
 };

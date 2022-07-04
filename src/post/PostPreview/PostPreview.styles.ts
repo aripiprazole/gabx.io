@@ -2,16 +2,15 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
-  grid-template: 
-    'posts'    'sidebar'
-    'view-all' 'view-all';
+  gap: 2rem;
   grid-template-columns: 1fr 15rem;
-  gap: 1rem;
-
-  flex: 1;
 `;
 
 export const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
   ul {
     display: flex;
     flex-direction: column;
