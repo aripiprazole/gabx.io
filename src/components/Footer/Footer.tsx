@@ -19,7 +19,13 @@
 import React from 'react';
 
 import {Container, Content, Main, Column} from './Footer.styles';
-import {FiGithub, FiInstagram, FiTwitch, FiTwitter} from 'react-icons/fi';
+import {
+  FiGithub,
+  FiInstagram,
+  FiLinkedin,
+  FiTwitch,
+  FiTwitter,
+} from 'react-icons/fi';
 
 const Footer = () => {
   return (
@@ -52,6 +58,12 @@ const Footer = () => {
             <li>
               <a href='https://www.twitch.tv/gabrielleeg1'>
                 <FiTwitch /> Twitch
+              </a>
+            </li>
+
+            <li>
+              <a href='https://www.linkedin.com/in/gabrielle-guimar%C3%A3es-de-oliveira-1aa393233/'>
+                <FiLinkedin /> Linkedin
               </a>
             </li>
 
