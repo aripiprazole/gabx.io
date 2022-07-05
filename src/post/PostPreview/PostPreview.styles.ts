@@ -23,7 +23,7 @@ export const Container = styled.div`
   gap: 2rem;
   grid-template-columns: 1fr 15rem;
 
-  @media(max-width: 1024px) {
+  @media(max-width: 64rem) {
     grid-template-columns: 1fr;
   }
 `;

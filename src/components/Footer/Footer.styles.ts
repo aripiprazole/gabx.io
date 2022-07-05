@@ -21,10 +21,6 @@ import styled from 'styled-components';
 export const Container = styled.footer`
   width: 100%;
   height: 18rem;
-  
-  display: flex;
-  flex-wrap: wrap-reverse;
-  gap: 1rem;
 
   color: #fefefe;
   background: #4842f5;
@@ -33,8 +29,17 @@ export const Container = styled.footer`
 `;
 
 export const Content = styled.main`
-  min-width: 23rem;
+  max-width: 80rem;
+  width: 100%;
   margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 1rem;
+`;
+
+export const Main = styled.main`
+  min-width: 23rem;
 
   flex: 1;
   display: flex;

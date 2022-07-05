@@ -18,7 +18,7 @@
 
 import React from 'react';
 
-import {Container, Content, Column, Info} from './Footer.styles';
+import {Container, Main, Column, Info, Content} from './Footer.styles';
 import {
   FiGithub,
   FiInstagram,
@@ -31,58 +31,60 @@ export default function Footer() {
   return (
     <Container>
       <Content>
-        <h2>Gabrielle Guimarães</h2>
+        <Main>
+          <h2>Gabrielle Guimarães</h2>
 
-        <p className='copyright'>
-          © 2022-present Gabrielle Guimarães. All Rights Reserved
-        </p>
+          <p className='copyright'>
+            © 2022-present Gabrielle Guimarães. All Rights Reserved
+          </p>
+        </Main>
+
+        <Info>
+          <Column>
+            <h3>Social</h3>
+
+            <ul>
+              <li>
+                <a href='https://twitter.com/gabrielleeg1'>
+                  <FiTwitter /> Twitter
+                </a>
+              </li>
+
+              <li>
+                <a href='https://www.instagram.com/gabrielle1guim/'>
+                  <FiInstagram /> Instagram
+                </a>
+              </li>
+
+              <li>
+                <a href='https://www.twitch.tv/gabrielleeg1'>
+                  <FiTwitch /> Twitch
+                </a>
+              </li>
+
+              <li>
+                <a href='https://www.linkedin.com/in/gabrielle-guimar%C3%A3es-de-oliveira-1aa393233/'>
+                  <FiLinkedin /> Linkedin
+                </a>
+              </li>
+
+              <li>
+                <a href='https://github.com/gabrielleeg1'>
+                  <FiGithub /> Github
+                </a>
+              </li>
+            </ul>
+          </Column>
+
+          <Column>
+            <h3>Contact</h3>
+
+            <ul>
+              <li>gabrielle1guim@gmail.com</li>
+            </ul>
+          </Column>
+        </Info>
       </Content>
-
-      <Info>
-        <Column>
-          <h3>Social</h3>
-
-          <ul>
-            <li>
-              <a href='https://twitter.com/gabrielleeg1'>
-                <FiTwitter /> Twitter
-              </a>
-            </li>
-
-            <li>
-              <a href='https://www.instagram.com/gabrielle1guim/'>
-                <FiInstagram /> Instagram
-              </a>
-            </li>
-
-            <li>
-              <a href='https://www.twitch.tv/gabrielleeg1'>
-                <FiTwitch /> Twitch
-              </a>
-            </li>
-
-            <li>
-              <a href='https://www.linkedin.com/in/gabrielle-guimar%C3%A3es-de-oliveira-1aa393233/'>
-                <FiLinkedin /> Linkedin
-              </a>
-            </li>
-
-            <li>
-              <a href='https://github.com/gabrielleeg1'>
-                <FiGithub /> Github
-              </a>
-            </li>
-          </ul>
-        </Column>
-
-        <Column>
-          <h3>Contact</h3>
-
-          <ul>
-            <li>gabrielle1guim@gmail.com</li>
-          </ul>
-        </Column>
-      </Info>
     </Container>
   );
 };

@@ -135,7 +135,7 @@ const Waves = styled.div`
 
 const Main = styled.main`
   width: 100%;
-  max-width: 1068px;
+  max-width: 80rem;
 
   margin: auto;
   padding: 1rem;
