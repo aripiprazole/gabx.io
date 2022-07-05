@@ -1,7 +1,10 @@
 {
   "name": "blog",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "author": "Gabrielle Guimarães de Oliveira",
+  "license": "GPL-3.0+",
+  "repository": "https://github.com/gabrielleeg1/blog",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
