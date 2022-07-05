@@ -18,7 +18,7 @@
 
 import React from 'react';
 
-import {Container, Content, Main, Column} from './Footer.styles';
+import {Container, Content, Column, Info} from './Footer.styles';
 import {
   FiGithub,
   FiInstagram,
@@ -31,14 +31,14 @@ const Footer = () => {
   return (
     <Container>
       <Content>
-        <Main>
-          <h2>Gabrielle Guimarães</h2>
+        <h2>Gabrielle Guimarães</h2>
 
-          <span className='copyright'>
-            © 2022-present Gabrielle Guimarães. All Rights Reserved
-          </span>
-        </Main>
+        <p className='copyright'>
+          © 2022-present Gabrielle Guimarães. All Rights Reserved
+        </p>
+      </Content>
 
+      <Info>
         <Column>
           <h3>Social</h3>
 
@@ -82,7 +82,7 @@ const Footer = () => {
             <li>gabrielle1guim@gmail.com</li>
           </ul>
         </Column>
-      </Content>
+      </Info>
     </Container>
   );
 };

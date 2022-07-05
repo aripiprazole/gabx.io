@@ -23,37 +23,36 @@ export const Container = styled.footer`
   height: 18rem;
   
   display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 1rem;
 
   color: #fefefe;
   background: #4842f5;
+
+  padding: 1rem;
 `;
 
 export const Content = styled.main`
-  width: 100%;
-  max-width: 1068px;
+  min-width: 23rem;
   margin: 0 auto;
-  
-  padding: 1rem 0;
-  
-  display: grid;
-  grid-template-columns: 1fr repeat(2, 8rem);
-  gap: 1rem;
-`;
 
-export const Main = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
-  h2 {
-    color: #cccccc;
-  }
 
   .copyright {
     color: #cecece;
     font-size: 12.5px;
   }
+`;
+
+export const Info = styled.div`
+  min-width: 20rem;
+  
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 `;
 
 export const Column = styled.nav`
@@ -62,19 +61,21 @@ export const Column = styled.nav`
   gap: 1rem;
 
   h3 {
-    font-size: 14px;
-    font-weight: 400;
-    color: #cccccc;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 
   ul {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    
+    li, a {
+      color: #cecece;
+    }
 
     a {
-      color: #fefefe;
-
       font-weight: 200;
 
       display: flex;
