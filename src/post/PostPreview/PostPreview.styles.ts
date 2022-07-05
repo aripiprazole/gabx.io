@@ -22,6 +22,10 @@ export const Container = styled.div`
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr 15rem;
+
+  @media(max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Main = styled.main`
