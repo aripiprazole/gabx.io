@@ -33,7 +33,7 @@ export type NavbarProps = {
   readonly routes: Route[];
 };
 
-const Navbar = ({routes}: NavbarProps) => {
+export default function Navbar({routes}: NavbarProps) {
   return (
     <Container>
       <ul>
@@ -48,5 +48,3 @@ const Navbar = ({routes}: NavbarProps) => {
     </Container>
   );
 };
-
-export default Navbar;

@@ -32,7 +32,7 @@ export type PostPreviewProps = {
   readonly posts: Post[],
 };
 
-const PostPreview = ({posts}: PostPreviewProps) => {
+export default function PostPreview({posts}: PostPreviewProps) {
   return (
     <Container id='posts'>
       <Main>
@@ -68,5 +68,3 @@ const PostPreview = ({posts}: PostPreviewProps) => {
     </Container>
   );
 };
-
-export default PostPreview;

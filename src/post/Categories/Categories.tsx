@@ -25,7 +25,7 @@ export type CategoriesProps = {
   readonly categories: string[],
 };
 
-const Categories = ({categories}: CategoriesProps) => {
+export default function Categories({categories}: CategoriesProps) {
   return (
     <Container>
       <Title>Categories</Title>
@@ -38,5 +38,3 @@ const Categories = ({categories}: CategoriesProps) => {
     </Container>
   );
 };
-
-export default Categories;

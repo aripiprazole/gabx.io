@@ -31,7 +31,7 @@ export type PostComponentProps = {
   readonly post: Post;
 }
 
-const PostComponent = ({post}: PostComponentProps) => {
+export default function PostComponent({post}: PostComponentProps) {
   return (
     <Container simple={post.simple ?? false}>
       <h2>{post.title}</h2>
@@ -44,5 +44,3 @@ const PostComponent = ({post}: PostComponentProps) => {
     </Container>
   );
 };
-
-export default PostComponent;

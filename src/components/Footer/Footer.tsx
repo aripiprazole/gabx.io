@@ -27,7 +27,7 @@ import {
   FiTwitter,
 } from 'react-icons/fi';
 
-const Footer = () => {
+export default function Footer() {
   return (
     <Container>
       <Content>
@@ -86,5 +86,3 @@ const Footer = () => {
     </Container>
   );
 };
-
-export default Footer;
