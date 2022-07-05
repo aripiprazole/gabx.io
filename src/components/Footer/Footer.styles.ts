@@ -30,6 +30,7 @@ export const Container = styled.footer`
 
 export const Content = styled.main`
   max-width: 80rem;
+  height: 100%;
   width: 100%;
   margin: 0 auto;
 
