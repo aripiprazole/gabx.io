@@ -84,6 +84,7 @@ const Main = styled.main`
   max-width: 55rem;
 
   margin: auto;
+  padding: 0 2rem;
 
   position: relative;
   z-index: 2;
