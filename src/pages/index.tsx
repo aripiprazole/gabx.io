@@ -20,10 +20,9 @@ import React from 'react';
 
 import type {NextPage} from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 
-import styled from 'styled-components';
-import {FaGithub, FaInstagram, FaLinkedin, FaTwitter} from 'react-icons/fa';
+import Root from '~/Root';
+import Social from '~/Social';
 
 const ABOUT_ME = 'My name is Gabrielle and I am a 17-year-old ' +
   'software engineer with a passion for functional programming ' +
@@ -33,123 +32,18 @@ const ABOUT_ME = 'My name is Gabrielle and I am a 17-year-old ' +
 
 const Home: NextPage = () => {
   return (
-    <Container>
+    <Root>
       <Head>
         <title>Hi, I&apos;m Gabi! </title>
         <meta name="description" content="Gabrielle's blog" />
         <link rel="icon" href="/public/favicon.ico" />
       </Head>
 
-      <Main>
-        <Sidebar>
-          <div>
-            <Image
-              alt="Gabrielle Guimarães"
-              height={340}
-              width={340}
-              src="https://raw.githubusercontent.com/aripiprazole/aripiprazole/main/profile.png"
-            />
-          </div>
-        </Sidebar>
-        <Content>
-          <h1>Hi, I&apos;m Gabi! 👋</h1>
-          <p>{ABOUT_ME}</p>
-          <Social>
-            <li>
-              <a href="https://www.instagram.com/gabrielle1guim">
-                <FaInstagram size={35} />
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.linkedin.com/in/gabrielle-guimarães-1aa393233">
-                <FaLinkedin size={35} />
-              </a>
-            </li>
-
-            <li>
-              <a href="https://github.com/gabrielleeg1">
-                <FaGithub size={35} />
-              </a>
-            </li>
-
-            <li>
-              <a href="https://twitter.com/gabrielleeg1">
-                <FaTwitter size={35} />
-              </a>
-            </li>
-          </Social>
-        </Content>
-      </Main>
-    </Container>
+      <h1>Hi, I&apos;m Gabi! 👋</h1>
+      <p>{ABOUT_ME}</p>
+      <Social />
+    </Root>
   );
 };
-
-const Container = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-`;
-
-const Sidebar = styled.div`
-  display: flex;
-  flex-grow: revert;
-  min-width: 340px;
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  
-  min-width: 30rem;
-
-  color: #fefefe;
-
-  > * {
-    width: 100%;
-  }
-
-  > p {
-    font-size: 1.2rem;
-  }
-
-  > h1 {
-    font-size: 2rem;
-  }
-`;
-
-const Main = styled.main`
-  width: 100%;
-  max-width: 80rem;
-  
-  display: flex;
-  gap: 3rem;
-
-  margin: auto;
-  padding: 0 2rem;
-
-  position: relative;
-  z-index: 2;
-
-  background: transparent;
-`;
-
-const Social = styled.ul`
-  display: flex;
-  gap: 2rem;
-
-  justify-content: end;
-
-  a {
-    cursor: pointer;
-    color: #fefefe;
-  }
-  
-  a:hover {
-    filter: brightness(0.8);
-  }
-`;
 
 export default Home;
