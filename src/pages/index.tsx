@@ -20,6 +20,7 @@ import React from 'react';
 
 import type {NextPage} from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 
 import styled from 'styled-components';
 import {FaGithub, FaInstagram, FaLinkedin, FaTwitter} from 'react-icons/fa';
@@ -40,33 +41,45 @@ const Home: NextPage = () => {
       </Head>
 
       <Main>
-        <h1>Hi, I&apos;m Gabi! 👋</h1>
-        <p>{ABOUT_ME}</p>
-        <Social>
-          <li>
-            <a href="https://www.instagram.com/gabrielle1guim">
-              <FaInstagram size={35} />
-            </a>
-          </li>
+        <Sidebar>
+          <div>
+            <Image
+              alt="Gabrielle Guimarães"
+              height={340}
+              width={340}
+              src="https://raw.githubusercontent.com/aripiprazole/aripiprazole/main/profile.png"
+            />
+          </div>
+        </Sidebar>
+        <Content>
+          <h1>Hi, I&apos;m Gabi! 👋</h1>
+          <p>{ABOUT_ME}</p>
+          <Social>
+            <li>
+              <a href="https://www.instagram.com/gabrielle1guim">
+                <FaInstagram size={35} />
+              </a>
+            </li>
 
-          <li>
-            <a href="https://www.linkedin.com/in/gabrielle-guimarães-1aa393233">
-              <FaLinkedin size={35} />
-            </a>
-          </li>
+            <li>
+              <a href="https://www.linkedin.com/in/gabrielle-guimarães-1aa393233">
+                <FaLinkedin size={35} />
+              </a>
+            </li>
 
-          <li>
-            <a href="https://github.com/gabrielleeg1">
-              <FaGithub size={35} />
-            </a>
-          </li>
+            <li>
+              <a href="https://github.com/gabrielleeg1">
+                <FaGithub size={35} />
+              </a>
+            </li>
 
-          <li>
-            <a href="https://twitter.com/gabrielleeg1">
-              <FaTwitter size={35} />
-            </a>
-          </li>
-        </Social>
+            <li>
+              <a href="https://twitter.com/gabrielleeg1">
+                <FaTwitter size={35} />
+              </a>
+            </li>
+          </Social>
+        </Content>
       </Main>
     </Container>
   );
@@ -79,21 +92,18 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const Main = styled.main`
-  width: 100%;
-  max-width: 55rem;
+const Sidebar = styled.div`
+  display: flex;
+  flex-grow: revert;
+  min-width: 340px;
+`;
 
-  margin: auto;
-  padding: 0 2rem;
-
-  position: relative;
-  z-index: 2;
-
-  background: transparent;
-
+const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  
+  min-width: 30rem;
 
   color: #fefefe;
 
@@ -108,6 +118,22 @@ const Main = styled.main`
   > h1 {
     font-size: 2rem;
   }
+`;
+
+const Main = styled.main`
+  width: 100%;
+  max-width: 80rem;
+  
+  display: flex;
+  gap: 3rem;
+
+  margin: auto;
+  padding: 0 2rem;
+
+  position: relative;
+  z-index: 2;
+
+  background: transparent;
 `;
 
 const Social = styled.ul`
