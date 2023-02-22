@@ -17,12 +17,14 @@
  */
 
 import React from 'react';
-import styled from 'styled-components';
+
 import Image from 'next/image';
+
+import styles from '~/styles/components/Sidebar.module.scss';
 
 function Sidebar() {
   return (
-    <Container>
+    <div className={styles.container}>
       <div>
         <Image
           alt="Gabrielle Guimarães"
@@ -31,14 +33,8 @@ function Sidebar() {
           src="https://raw.githubusercontent.com/aripiprazole/aripiprazole/main/profile.png"
         />
       </div>
-    </Container>
-  )
+    </div>
+  );
 }
-
-const Container = styled.div`
-  display: flex;
-  flex-grow: revert;
-  min-width: 340px;
-`;
 
 export default Sidebar;

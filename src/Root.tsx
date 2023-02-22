@@ -18,9 +18,9 @@
 
 import React from 'react';
 
-import styled from 'styled-components';
-
 import Sidebar from '~/Sidebar';
+
+import styles from '~/styles/components/Root.module.scss';
 
 type Props = {
   children: React.ReactNode;
@@ -30,60 +30,15 @@ function Root(props: Props) {
   const {children} = props;
 
   return (
-    <Container>
-      <Main>
+    <div className={styles.container}>
+      <main className={styles.main}>
         <Sidebar />
-        <Content>
+        <div className={styles.content}>
           {children}
-        </Content>
-      </Main>
-    </Container>
+        </div>
+      </main>
+    </div>
   );
 }
-
-const Container = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-`;
-
-const Main = styled.main`
-  width: 100%;
-  max-width: 80rem;
-  
-  display: flex;
-  gap: 3rem;
-
-  margin: auto;
-  padding: 0 2rem;
-
-  position: relative;
-  z-index: 2;
-
-  background: transparent;
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  
-  min-width: 30rem;
-
-  color: #fefefe;
-
-  > * {
-    width: 100%;
-  }
-
-  > p {
-    font-size: 1.2rem;
-  }
-
-  > h1 {
-    font-size: 2rem;
-  }
-`;
 
 export default Root;

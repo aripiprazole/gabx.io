@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  gap: 2rem;
+
+  justify-content: flex-end;
+
+  a {
+    cursor: pointer;
+    color: #fefefe;
+  }
+
+  a:hover {
+    filter: brightness(0.8);
+  }
+}

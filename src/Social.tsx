@@ -18,13 +18,13 @@
 
 import React from 'react';
 
-import styled from 'styled-components';
-
 import {FaGithub, FaInstagram, FaLinkedin, FaTwitter} from 'react-icons/fa';
+
+import styles from '~/styles/components/Social.module.scss';
 
 function Social() {
   return (
-    <Container>
+    <div className={styles.container}>
       <li>
         <a href="https://www.instagram.com/gabrielle1guim">
           <FaInstagram size={35} />
@@ -48,24 +48,8 @@ function Social() {
           <FaTwitter size={35} />
         </a>
       </li>
-    </Container>
+    </div>
   );
 }
-
-const Container = styled.ul`
-  display: flex;
-  gap: 2rem;
-
-  justify-content: end;
-
-  a {
-    cursor: pointer;
-    color: #fefefe;
-  }
-  
-  a:hover {
-    filter: brightness(0.8);
-  }
-`;
 
 export default Social;

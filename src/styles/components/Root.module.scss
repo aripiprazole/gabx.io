@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 80rem;
+
+  display: flex;
+  gap: 3rem;
+
+  margin: auto;
+  padding: 0 2rem;
+
+  position: relative;
+  z-index: 2;
+
+  background: transparent;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  min-width: 30rem;
+
+  color: #fefefe;
+
+  > * {
+    width: 100%;
+  }
+
+  > p {
+    font-size: 1.2rem;
+  }
+
+  > h1 {
+    font-size: 2rem;
+  }
+}
