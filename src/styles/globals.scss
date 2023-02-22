@@ -1,6 +1,6 @@
-/*
+/*!
  * My personal blog and portfolio website
- * Copyright (C) 2022  Gabrielle Guimarães
+ * Copyright (C) 2023  Gabrielle Guimarães
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,13 +16,46 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import React from 'react';
-import type {AppProps} from 'next/app';
+:root {
+  --background: #1a1a1a;
+}
 
-import '~/styles/globals.scss';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-const MyApp = ({Component, pageProps}: AppProps) => {
-  return <Component {...pageProps} />;
-};
+*, input, button, select, textarea, optgroup, option {
+  font-family: 'JetBrains Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-export default MyApp;
+html, body, #root {
+  background: var(--background);
+}
+
+html,
+body,
+#root,
+#__next {
+  height: 100%;
+  width: 100%;
+  min-width: 25.625rem;
+  font-size: 14px;
+}
+
+*:focus {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
