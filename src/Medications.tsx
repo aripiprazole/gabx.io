@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /*
  * My personal blog and portfolio website
  * Copyright (C) 2023  Gabrielle Guimarães
@@ -18,26 +19,25 @@
 
 import React from 'react';
 
-import Image from 'next/image';
+import {MEDICATIONS} from '~/utils/constants';
 
-import Medications from '~/Medications';
+import styles from '~/styles/components/Medications.module.scss';
 
-import styles from '~/styles/components/Sidebar.module.scss';
-
-function Sidebar() {
+function Medications() {
   return (
     <div className={styles.container}>
-      <div className={styles.profileImage}>
-        <Image
-          alt="Gabrielle Guimarães"
-          height={340}
-          width={340}
-          src="https://raw.githubusercontent.com/aripiprazole/aripiprazole/main/profile.png"
-        />
-      </div>
-      <Medications/>
+      <h3>Meet the other compounds! 🙂</h3>
+      {MEDICATIONS.map((medication) => (
+        <div key={medication} className={styles.medication}>
+          ~
+          <div className={styles.icon}>
+            <img alt={medication} src={`${medication}.png`} />
+          </div>
+          <a href={`https://github.com/${medication}`}>{medication}</a>
+        </div>
+      ))}
     </div>
   );
 }
 
-export default Sidebar;
+export default Medications;
