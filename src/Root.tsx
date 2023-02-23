@@ -33,9 +33,7 @@ function Root(props: Props) {
     <div className={styles.container}>
       <main className={styles.main}>
         <Sidebar />
-        <div className={styles.content}>
-          {children}
-        </div>
+        <div className={styles.content}>{children}</div>
       </main>
     </div>
   );

@@ -26,26 +26,26 @@ function Social() {
   return (
     <div className={styles.container}>
       <li>
-        <a href="https://www.instagram.com/gabrielle1guim">
-          <FaInstagram size="2.188rem" />
+        <a href='https://www.instagram.com/gabrielle1guim'>
+          <FaInstagram size='2.188rem' />
         </a>
       </li>
 
       <li>
-        <a href="https://www.linkedin.com/in/gabrielle-guimarães-1aa393233">
-          <FaLinkedin size="2.188rem" />
+        <a href='https://www.linkedin.com/in/gabrielle-guimarães-1aa393233'>
+          <FaLinkedin size='2.188rem' />
         </a>
       </li>
 
       <li>
-        <a href="https://github.com/aripiprazole">
-          <FaGithub size="2.188rem" />
+        <a href='https://github.com/aripiprazole'>
+          <FaGithub size='2.188rem' />
         </a>
       </li>
 
       <li>
-        <a href="https://twitter.com/gabrielleeg1">
-          <FaTwitter size="2.188rem" />
+        <a href='https://twitter.com/gabrielleeg1'>
+          <FaTwitter size='2.188rem' />
         </a>
       </li>
     </div>

@@ -17,7 +17,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', 'prettier', '@typescript-eslint'],
   settings: {
     react: {
       version: 'detect',
@@ -27,6 +27,15 @@ module.exports = {
     'require-jsdoc': ['off'],
     'react/prop-types': ['off'],
     'spaced-comment': ['off'],
+    'prettier/prettier': ['error', {}, {usePrettierrc: true}],
+    'react/no-children-prop': ['off'],
+    'indent': ['off'],
+    'quotes': ['off'],
+    'max-len': ['off'],
+    'operator-linebreak': [
+      'error',
+      'after',
+      {overrides: {'?': 'before', ':': 'before'}},
+    ],
   },
 };
-

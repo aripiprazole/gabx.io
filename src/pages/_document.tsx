@@ -18,28 +18,27 @@
 
 import React from 'react';
 
-import Document, {
-  Head,
-  Html,
-  Main,
-  NextScript,
-} from 'next/document';
+import Document, {Head, Html, Main, NextScript} from 'next/document';
 
 class AppDocument extends Document {
   public render(): JSX.Element {
     return (
       <Html>
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com"/>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true'/>
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
-            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap"
-            rel="stylesheet"
+            rel='preconnect'
+            href='https://fonts.gstatic.com'
+            crossOrigin='true'
+          />
+          <link
+            href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap'
+            rel='stylesheet'
           />
         </Head>
         <body>
-          <Main/>
-          <NextScript/>
+          <Main />
+          <NextScript />
         </body>
       </Html>
     );

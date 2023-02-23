@@ -32,8 +32,8 @@ function Sidebar() {
           <Image
             width={680}
             height={680}
-            alt="Gabrielle Guimarães"
-            src="https://raw.githubusercontent.com/aripiprazole/aripiprazole/main/profile.png"
+            alt='Gabrielle Guimarães'
+            src='https://raw.githubusercontent.com/aripiprazole/aripiprazole/main/profile.png'
           />
         </div>
 

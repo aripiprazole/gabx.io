@@ -43,7 +43,7 @@ function Work(props: Props) {
         <p>{description}</p>
         <a className={styles.readMore} href={href}>
           <FiExternalLink />
-            Read more
+          Read more
         </a>
       </main>
     </article>
