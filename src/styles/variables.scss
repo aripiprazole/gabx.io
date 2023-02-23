@@ -1,4 +1,4 @@
-/*
+/*!
  * My personal blog and portfolio website
  * Copyright (C) 2023  Gabrielle Guimarães
  *
@@ -16,29 +16,4 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import React from 'react';
-
-import Image from 'next/image';
-
-import Medications from '~/Medications';
-
-import styles from '~/styles/components/Sidebar.module.scss';
-
-function Sidebar() {
-  return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <div className={styles.profile}>
-          <img
-            alt="Gabrielle Guimarães"
-            src="https://raw.githubusercontent.com/aripiprazole/aripiprazole/main/profile.png"
-          />
-        </div>
-
-        <Medications />
-      </div>
-    </div>
-  );
-}
-
-export default Sidebar;
+$break-width: 55rem;
