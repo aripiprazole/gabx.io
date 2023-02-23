@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .container {
   display: flex;
   gap: 2rem;
@@ -6,7 +8,7 @@
 
   a {
     cursor: pointer;
-    color: #fefefe;
+    color: $text-color;
   }
 
   a:hover {

@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -15,7 +17,7 @@
 }
 
 .readMore {
-  color: #fefefe;
+  color: $text-color;
   font-weight: bold;
   padding: 0.5rem 0;
 
@@ -47,7 +49,7 @@
   }
 
   p {
-    color: #dadada;
+    color: $text-color-dimmed;
     text-align: justify;
   }
 }

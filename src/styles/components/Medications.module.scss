@@ -7,7 +7,7 @@
   min-width: 50%;
 
   > h3 {
-    color: #fefefe;
+    color: $text-color;
   }
 
   @media (max-width: $mobile-width) {
@@ -19,12 +19,12 @@
 
 .medication {
   display: flex;
-  color: #fefefe;
+  color: $text-color;
   gap: 1rem;
   align-items: center;
 
   & a {
-    color: #fefefe;
+    color: $text-color;
     text-decoration: none;
   }
 
@@ -38,7 +38,7 @@
 }
 
 .icon {
-  background: #fefefe;
+  background: $text-color;
   height: 32px;
   width: 32px;
   display: flex;

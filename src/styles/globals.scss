@@ -15,10 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
-:root {
-  --background: #1a1a1a;
-}
+@import "./variables";
 
 * {
   margin: 0;
@@ -33,7 +30,7 @@
 }
 
 html, body, #root {
-  background: var(--background);
+  background: $background-color;
 }
 
 html,
