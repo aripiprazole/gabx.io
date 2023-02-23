@@ -1,3 +1,5 @@
+@import "../variables";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -6,6 +8,12 @@
 
   > h3 {
     color: #fefefe;
+  }
+
+  @media (max-width: $mobile-width) {
+    > h3 {
+      display: none;
+    }
   }
 }
 

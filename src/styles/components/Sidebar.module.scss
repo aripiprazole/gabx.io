@@ -20,7 +20,7 @@
     object-fit: contain;
   }
 
-  @media (max-width: $break-width - 20rem) {
+  @media (max-width: $mobile-width) {
     min-width: 40px;
     min-height: 40px;
     max-width: 100%;
@@ -32,14 +32,14 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 
   @media (max-width: $break-width) {
     width: 100%;
     flex-direction: row;
   }
 
-  @media (max-width: $break-width - 20rem) {
+  @media (max-width: $mobile-width) {
     flex-direction: column;
   }
 }
