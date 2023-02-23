@@ -29,7 +29,9 @@ function Sidebar() {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.profile}>
-          <img
+          <Image
+            width={680}
+            height={680}
             alt="Gabrielle Guimarães"
             src="https://raw.githubusercontent.com/aripiprazole/aripiprazole/main/profile.png"
           />

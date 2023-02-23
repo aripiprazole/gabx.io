@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 /*
  * My personal blog and portfolio website
  * Copyright (C) 2023  Gabrielle Guimarães
@@ -19,6 +18,8 @@
 
 import React from 'react';
 
+import Image from 'next/image';
+
 import {MEDICATIONS} from '~/utils/constants';
 
 import styles from '~/styles/components/Medications.module.scss';
@@ -32,7 +33,13 @@ function Medications() {
         <div key={medication} className={styles.medication}>
           ~
           <div className={styles.icon}>
-            <img alt={medication} src={`${medication}.png`} />
+            <Image
+              width={64}
+              height={64}
+              quality={100}
+              alt={medication}
+              src={`/${medication}.png`}
+            />
           </div>
           <a href={`https://github.com/${medication}`}>
             {medication}
