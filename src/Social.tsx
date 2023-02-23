@@ -38,7 +38,7 @@ function Social() {
       </li>
 
       <li>
-        <a href="https://github.com/gabrielleeg1">
+        <a href="https://github.com/aripiprazole">
           <FaGithub size={35} />
         </a>
       </li>
