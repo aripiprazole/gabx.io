@@ -23,7 +23,8 @@ import Head from 'next/head';
 
 import Root from '~/Root';
 import Social from '~/Social';
-import Work from '~/Work';
+import Articles from '~/Articles';
+import Projects from '~/Projects';
 
 import {ABOUT_ME} from '~/utils/constants';
 
@@ -40,7 +41,8 @@ const Home: NextPage = () => {
 
       <h1 className={styles.title}>Hi, I&apos;m Gabi! 👋</h1>
       <p>{ABOUT_ME}</p>
-      <Work />
+      <Projects />
+      <Articles />
       <Social />
     </Root>
   );

@@ -18,36 +18,32 @@
 
 import React from 'react';
 
-import {FiExternalLink} from 'react-icons/fi';
-import {IconType} from 'react-icons';
+import {ABOUT_PROJECTS, PROJECTS} from '~/utils/constants';
+
+import Work from '~/Work';
 
 import styles from '~/styles/components/Work.module.scss';
 
-type Props = {
-  title: string;
-  description: string;
-  href: string;
-  icon: IconType;
-};
-
-function Work(props: Props) {
-  const {title, description, href, icon: Icon} = props;
-
+function Projects() {
   return (
-    <article className={styles.work}>
-      <div className={styles.icon}>
-        <Icon size={34} />
-      </div>
-      <main>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <a className={styles.readMore} href={href}>
-          <FiExternalLink />
-            Read more
-        </a>
-      </main>
-    </article>
+    <div className={styles.container}>
+      <h2>My projects 🧪</h2>
+      <p>{ABOUT_PROJECTS}</p>
+
+      <ul className={styles.articles}>
+        {PROJECTS.map(({title, description, href, icon}) => (
+          <li key={title}>
+            <Work
+              title={title}
+              description={description}
+              href={href}
+              icon={icon}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
-export default Work;
+export default Projects;

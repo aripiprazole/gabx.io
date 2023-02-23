@@ -23,12 +23,18 @@
   }
 }
 
-.article {
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.work {
   display: flex;
   gap: 1rem;
 }
 
-.article main {
+.work main {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
@@ -49,5 +55,5 @@
   align-items: center;
   justify-content: center;
   flex-grow: revert;
-  width: 160px;
+  min-width: 100px;
 }
