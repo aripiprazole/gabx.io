@@ -23,12 +23,11 @@ import Head from 'next/head';
 
 import Root from '~/Root';
 import Social from '~/Social';
+import Work from '~/Work';
 
-const ABOUT_ME = 'My name is Gabrielle and I am a 17-year-old ' +
-  'software engineer with a passion for functional programming ' +
-  'and the Kotlin programming language. In my free time, I enjoy ' +
-  'playing Minecraft and working on projects related to compilers. ' +
-  'I am excited to share my skills and experience with others in the field.';
+import {ABOUT_ME} from '~/utils/constants';
+
+import styles from '~/styles/pages/index.module.scss';
 
 const Home: NextPage = () => {
   return (
@@ -39,8 +38,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/public/favicon.ico" />
       </Head>
 
-      <h1>Hi, I&apos;m Gabi! 👋</h1>
+      <h1 className={styles.title}>Hi, I&apos;m Gabi! 👋</h1>
       <p>{ABOUT_ME}</p>
+      <Work />
       <Social />
     </Root>
   );
