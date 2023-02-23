@@ -25,7 +25,7 @@ import styles from '~/styles/components/Sidebar.module.scss';
 function Sidebar() {
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.profileImage}>
         <Image
           alt="Gabrielle Guimarães"
           height={340}

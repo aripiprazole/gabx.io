@@ -21,6 +21,12 @@
   background: transparent;
 }
 
+@media (max-width: 55rem) {
+  .main {
+    flex-direction: column;
+  }
+}
+
 .content {
   display: flex;
   flex-direction: column;
