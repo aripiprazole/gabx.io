@@ -28,8 +28,6 @@ import Projects from '~/Projects';
 
 import {ABOUT_ME} from '~/utils/constants';
 
-import styles from '~/styles/pages/index.module.scss';
-
 const Home: NextPage = () => {
   return (
     <Root>
@@ -39,7 +37,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/public/favicon.ico" />
       </Head>
 
-      <h1 className={styles.title}>Hi, I&apos;m Gabi! 👋</h1>
+      <h1>Hi, I&apos;m Gabi! 👋</h1>
       <p>{ABOUT_ME}</p>
       <Projects />
       <Articles />
