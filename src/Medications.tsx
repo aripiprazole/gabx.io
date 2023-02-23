@@ -22,6 +22,7 @@ import React from 'react';
 import {MEDICATIONS} from '~/utils/constants';
 
 import styles from '~/styles/components/Medications.module.scss';
+import {FiLink} from 'react-icons/fi';
 
 function Medications() {
   return (
@@ -33,7 +34,10 @@ function Medications() {
           <div className={styles.icon}>
             <img alt={medication} src={`${medication}.png`} />
           </div>
-          <a href={`https://github.com/${medication}`}>{medication}</a>
+          <a href={`https://github.com/${medication}`}>
+            {medication}
+            <FiLink />
+          </a>
         </div>
       ))}
     </div>
