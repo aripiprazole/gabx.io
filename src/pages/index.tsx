@@ -33,7 +33,6 @@ const Home: NextPage = () => {
     <Root>
       <Head>
         <title>Hi, I&apos;m Gabi! </title>
-        <meta name='description' content="Gabrielle's blog" />
         <link rel='icon' href='/public/favicon.ico' />
       </Head>
 

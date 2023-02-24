@@ -19,6 +19,7 @@
 import React from 'react';
 
 import Document, {Head, Html, Main, NextScript} from 'next/document';
+import {ABOUT_ME} from '~/utils/constants';
 
 class AppDocument extends Document {
   public render(): JSX.Element {
@@ -35,6 +36,11 @@ class AppDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap'
             rel='stylesheet'
           />
+          <meta property='og:title' content={"Hi, I'm Gabi! 👋"} />
+          <meta property='og:description' content={ABOUT_ME} />
+          <meta property='og:image' content='/preview.png' />
+          <meta property='og:image:width' content='1200' />
+          <meta property='og:image:height' content='630' />
         </Head>
         <body>
           <Main />
