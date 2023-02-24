@@ -47,13 +47,17 @@
   width: 2.2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  padding: 0.1rem;
+
+  position: relative;
 
   border-radius: 20%;
 
+  overflow: hidden;
+
   > img {
-    width: 1.875rem;
-    max-height: 1.875rem;
+    height: 1.875rem;
   }
 
   @media (prefers-color-scheme: light) {

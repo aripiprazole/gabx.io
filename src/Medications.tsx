@@ -18,12 +18,11 @@
 
 import React from 'react';
 
-import Image from 'next/image';
+import {FiLink} from 'react-icons/fi';
 
 import {MEDICATIONS} from '~/utils/constants';
 
 import styles from '~/styles/components/Medications.module.scss';
-import {FiLink} from 'react-icons/fi';
 
 function Medications() {
   return (
@@ -36,13 +35,8 @@ function Medications() {
             style={{background: '#fefefe!important'}}
             className={styles.icon}
           >
-            <Image
-              width={64}
-              height={64}
-              quality={100}
-              alt={medication}
-              src={`/${medication}.png`}
-            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img alt={medication} src={`/${medication}.png`} />
           </div>
           <a href={`https://github.com/${medication}`}>
             {medication}
