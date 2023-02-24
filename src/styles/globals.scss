@@ -18,23 +18,23 @@
 @import "./variables";
 
 :root {
-  --background-color: #fefefe;
-  --text-color: #1a1a1a;
-  --text-color-dimmed: #262626;
-  --light-mode-border: #fefefe;
+  --background-color: $background-color;
+  --text-color: $text-color;
+  --text-color-dimmed: $text-color-dimmed;
+  --light-mode-border: $background-color;
 
   @media(prefers-color-scheme: dark) {
-    --background-color: #1a1a1a;
-    --text-color: #fefefe;
-    --text-color-dimmed: #dadada;
+    --background-color: $dark-background-color;
+    --text-color: $dark-text-color;
+    --text-color-dimmed: $dark-text-color-dimmed;
     --light-mode-border: transparent;
   }
 }
 
 [data-darkreader-mode="dynamic"] {
-  --background-color: #1a1a1a;
-  --text-color: #fefefe;
-  --text-color-dimmed: #dadada;
+  --background-color: $dark-background-color;
+  --text-color: $dark-text-color;
+  --text-color-dimmed: $dark-text-color-dimmed;
   --light-mode-border: transparent;
 
   --darkreader-bg--background-color: var(--background-color);
