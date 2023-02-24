@@ -21,12 +21,25 @@
   --background-color: #fefefe;
   --text-color: #1a1a1a;
   --text-color-dimmed: #262626;
+  --light-mode-border: #fefefe;
 
   @media(prefers-color-scheme: dark) {
     --background-color: #1a1a1a;
     --text-color: #fefefe;
     --text-color-dimmed: #dadada;
+    --light-mode-border: transparent;
   }
+}
+
+[data-darkreader-mode="dynamic"] {
+  --background-color: #1a1a1a;
+  --text-color: #fefefe;
+  --text-color-dimmed: #dadada;
+  --light-mode-border: transparent;
+
+  --darkreader-bg--background-color: var(--background-color);
+  --darkreader-text--text-color: var(--text-color);
+  --darkreader-text--text-color-dimmed: var(--text-color-dimmed);
 }
 
 ::-webkit-scrollbar {

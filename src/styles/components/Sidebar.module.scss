@@ -24,7 +24,7 @@ $radius: 1.8rem;
     border-radius: $radius;
 
     @media (prefers-color-scheme: light) {
-      border: 1.2px solid var(--text-color);
+      border: 1.2px solid var(--light-mode-border);
     }
   }
 

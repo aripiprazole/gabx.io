@@ -32,7 +32,10 @@ function Medications() {
       {MEDICATIONS.map((medication) => (
         <div key={medication} className={styles.medication}>
           ~
-          <div className={styles.icon}>
+          <div
+            style={{background: '#fefefe!important'}}
+            className={styles.icon}
+          >
             <Image
               width={64}
               height={64}

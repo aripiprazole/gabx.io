@@ -42,7 +42,7 @@
 }
 
 .icon {
-  background: $dark-text-color;
+  background: $background-color;
   height: 2.2rem;
   width: 2.2rem;
   display: flex;
@@ -57,6 +57,6 @@
   }
 
   @media (prefers-color-scheme: light) {
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--light-mode-border);
   }
 }
