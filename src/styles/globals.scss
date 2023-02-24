@@ -18,23 +18,23 @@
 @import "./variables";
 
 :root {
-  --background-color: $background-color;
-  --text-color: $text-color;
-  --text-color-dimmed: $text-color-dimmed;
-  --light-mode-border: $background-color;
+  --background-color: #fefefe;
+  --text-color: #fefefe;
+  --text-color-dimmed: #1c1c1c;
+  --light-mode-border: #1c1c1c;
 
   @media(prefers-color-scheme: dark) {
-    --background-color: $dark-background-color;
-    --text-color: $dark-text-color;
-    --text-color-dimmed: $dark-text-color-dimmed;
+    --background-color: #1a1c1e;
+    --text-color: #fefefe;
+    --text-color-dimmed: #dadada;
     --light-mode-border: transparent;
   }
 }
 
 [data-darkreader-mode="dynamic"] {
-  --background-color: $dark-background-color;
-  --text-color: $dark-text-color;
-  --text-color-dimmed: $dark-text-color-dimmed;
+  --background-color: #1a1c1e;
+  --text-color: #fefefe;
+  --text-color-dimmed: #dadada;
   --light-mode-border: transparent;
 
   --darkreader-bg--background-color: var(--background-color);
@@ -58,7 +58,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body, #root {
+html, body, #root, #__next {
   background: var(--background-color);
 }
 
