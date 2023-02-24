@@ -7,7 +7,7 @@
   min-width: 50%;
 
   > h3 {
-    color: $text-color;
+    color: var(--text-color);
   }
 
   @media (max-width: $mobile-width) {
@@ -19,7 +19,7 @@
 
 .medication {
   display: flex;
-  color: $text-color;
+  color: var(--text-color);
   gap: 1rem;
   align-items: center;
 
@@ -28,7 +28,7 @@
     align-items: center;
     gap: 0.5rem;
 
-    color: $text-color;
+    color: var(--text-color);
     text-decoration: none;
   }
 
@@ -42,9 +42,9 @@
 }
 
 .icon {
-  background: $text-color;
-  height: 2rem;
-  width: 2rem;
+  background: $dark-text-color;
+  height: 2.2rem;
+  width: 2.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,5 +54,9 @@
   > img {
     width: 1.875rem;
     max-height: 1.875rem;
+  }
+
+  @media (prefers-color-scheme: light) {
+    border: 1px solid var(--text-color);
   }
 }

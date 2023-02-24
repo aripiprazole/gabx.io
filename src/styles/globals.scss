@@ -17,6 +17,18 @@
  */
 @import "./variables";
 
+:root {
+  --background-color: #fefefe;
+  --text-color: #1a1a1a;
+  --text-color-dimmed: #262626;
+
+  @media(prefers-color-scheme: dark) {
+    --background-color: #1a1a1a;
+    --text-color: #fefefe;
+    --text-color-dimmed: #dadada;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +42,7 @@
 }
 
 html, body, #root {
-  background: $background-color;
+  background: var(--background-color);
 }
 
 html,

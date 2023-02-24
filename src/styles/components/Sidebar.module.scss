@@ -1,6 +1,7 @@
 @import "../variables";
 
 $profile-image-size: 21.25rem;
+$radius: 1.8rem;
 
 .container {
   display: flex;
@@ -20,6 +21,11 @@ $profile-image-size: 21.25rem;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    border-radius: $radius;
+
+    @media (prefers-color-scheme: light) {
+      border: 1.2px solid var(--text-color);
+    }
   }
 
   @media (max-width: $mobile-width) {
