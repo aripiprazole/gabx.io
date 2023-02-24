@@ -38,9 +38,12 @@ class AppDocument extends Document {
           />
           <meta property='og:title' content={"Hi, I'm Gabi! 👋"} />
           <meta property='og:description' content={ABOUT_ME} />
-          <meta property='og:image' content='/preview.png' />
+          <meta
+            property='og:image'
+            content='https://raw.githubusercontent.com/aripiprazole/aripiprazole/main/profile.png'
+          />
           <meta property='og:image:width' content='1200' />
-          <meta property='og:image:height' content='630' />
+          <meta property='og:image:height' content='1200' />
         </Head>
         <body>
           <Main />
