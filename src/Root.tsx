@@ -31,11 +31,13 @@ function Root(props: Props) {
   const {children} = props;
 
   return (
-    <Scroll className={styles.container}>
-      <main className={styles.main}>
-        <Sidebar />
-        <div className={styles.content}>{children}</div>
-      </main>
+    <Scroll>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <Sidebar />
+          <div className={styles.content}>{children}</div>
+        </main>
+      </div>
     </Scroll>
   );
 }
