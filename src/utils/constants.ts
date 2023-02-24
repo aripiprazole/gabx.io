@@ -41,6 +41,8 @@ export const ABOUT_PROJECTS =
   'optimize and customize gameplay is a joy. I love pushing the boundaries ' +
   'of programming and seeking new challenges!';
 
+export const MOMENTUM_EASE = 0.175;
+
 export const MEDICATIONS = ['aripiprazole', 'dextroamphetamine', 'arketamine'];
 
 export const PROJECTS = [
