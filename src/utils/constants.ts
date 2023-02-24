@@ -43,7 +43,12 @@ export const ABOUT_PROJECTS =
 
 export const MOMENTUM_EASE = 0.175;
 
-export const MEDICATIONS = ['aripiprazole', 'dextroamphetamine', 'arketamine'];
+export const MEDICATIONS = [
+  'aripiprazole',
+  'dextroamphetamine',
+  'arketamine',
+  'atomoxetine',
+];
 
 export const PROJECTS = [
   {
