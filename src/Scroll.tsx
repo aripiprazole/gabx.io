@@ -76,8 +76,10 @@ function Scroll(props: Props) {
   useEffect(() => {
     init();
     window.addEventListener('scroll', updateScroll);
+    window.addEventListener('resize', init);
     return () => {
       window.removeEventListener('scroll', updateScroll);
+      window.removeEventListener('resize', init);
     };
   }, []);
 
