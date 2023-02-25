@@ -26,6 +26,10 @@
   @media (max-width: $break-width) {
     flex-direction: column;
   }
+
+  @media (max-width: $mobile-width) {
+    padding: 4rem 2rem;
+  }
 }
 
 
