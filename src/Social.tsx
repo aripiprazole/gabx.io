@@ -44,7 +44,7 @@ function Social() {
       </li>
 
       <li>
-        <a href='https://twitter.com/gabrielleeg1'>
+        <a href='https://twitter.com/algebraic_gabi'>
           <FaTwitter size='2.188rem' />
         </a>
       </li>
