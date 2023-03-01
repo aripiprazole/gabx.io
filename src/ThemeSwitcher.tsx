@@ -1,6 +1,6 @@
 /*
  * My personal blog and portfolio website
- * Copyright (C) 2022  Gabrielle Guimarães
+ * Copyright (C) 2023  Gabrielle Guimarães
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,33 +16,22 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 
-import type {NextPage} from 'next';
-import Head from 'next/head';
+import {FiMoon, FiSun} from 'react-icons/all';
 
-import Root from '~/Root';
-import Footer from '~/Footer';
-import Articles from '~/Articles';
-import Projects from '~/Projects';
+import styles from '~/styles/components/ThemeSwitcher.module.scss';
 
-import {ABOUT_ME} from '~/utils/constants';
+type Theme = 'light' | 'dark' | undefined;
 
-const Home: NextPage = () => {
+function ThemeSwitcher() {
+  const [theme] = useState<Theme>();
+
   return (
-    <Root>
-      <Head>
-        <title>Hi, I&apos;m Gabi! </title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
-      <h1>Hi, I&apos;m Gabi! 👋</h1>
-      <p>{ABOUT_ME}</p>
-      <Projects />
-      <Articles />
-      <Footer />
-    </Root>
+    <button className={styles.container}>
+      {theme === 'light' ? <FiSun size='1.8rem' /> : <FiMoon size='1.8rem' />}
+    </button>
   );
-};
+}
 
-export default Home;
+export default ThemeSwitcher;

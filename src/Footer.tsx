@@ -1,6 +1,6 @@
 /*
  * My personal blog and portfolio website
- * Copyright (C) 2022  Gabrielle Guimarães
+ * Copyright (C) 2023  Gabrielle Guimarães
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,31 +18,18 @@
 
 import React from 'react';
 
-import type {NextPage} from 'next';
-import Head from 'next/head';
+import ThemeSwitcher from '~/ThemeSwitcher';
+import Social from '~/Social';
 
-import Root from '~/Root';
-import Footer from '~/Footer';
-import Articles from '~/Articles';
-import Projects from '~/Projects';
+import styles from '~/styles/components/Footer.module.scss';
 
-import {ABOUT_ME} from '~/utils/constants';
-
-const Home: NextPage = () => {
+function Footer() {
   return (
-    <Root>
-      <Head>
-        <title>Hi, I&apos;m Gabi! </title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
-      <h1>Hi, I&apos;m Gabi! 👋</h1>
-      <p>{ABOUT_ME}</p>
-      <Projects />
-      <Articles />
-      <Footer />
-    </Root>
+    <footer className={styles.container}>
+      <ThemeSwitcher />
+      <Social />
+    </footer>
   );
-};
+}
 
-export default Home;
+export default Footer;
