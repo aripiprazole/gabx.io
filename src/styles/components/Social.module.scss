@@ -4,12 +4,15 @@
 
   justify-content: flex-end;
 
-  a {
+  & a {
     cursor: pointer;
+    display: flex;
+    align-items: center;
     color: var(--text-color);
+    transition: 300ms;
   }
 
-  a:hover {
-    filter: brightness(0.8);
+  & a:hover {
+    filter: opacity(0.8);
   }
 }

@@ -18,9 +18,10 @@
   color: var(--text-color);
   font-weight: bold;
   padding: 0.5rem 0;
+  transition: 300ms;
 
   &:hover {
-    filter: brightness(0.8);
+    filter: opacity(0.8);
   }
 }
 
