@@ -18,7 +18,7 @@
 
 import React, {useState} from 'react';
 
-import {FiMoon, FiSun} from 'react-icons/all';
+import {FiMoon, FiSun} from 'react-icons/fi';
 
 import styles from '~/styles/components/ThemeSwitcher.module.scss';
 
