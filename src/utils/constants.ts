@@ -43,11 +43,7 @@ export const ABOUT_PROJECTS =
 
 export const MOMENTUM_EASE = 0.175;
 
-export const MEDICATIONS = [
-  'aripiprazole',
-  'arketamine',
-  'atomoxetine',
-];
+export const MEDICATIONS = ['aripiprazole', 'arketamine', 'atomoxetine'];
 
 export const PROJECTS = [
   {
@@ -79,6 +75,16 @@ export const ARTICLES = [
       'to practice concurrency, and tooling stuff, which is very cool ' +
       'and useful nowadays...',
     href: 'https://medium.com/@gabrielleeg1/writing-a-minecraft-protocol-implementation-in-kotlin-9276c584bd42',
+    icon: FiBook,
+  },
+  {
+    title: 'Defunctionalization',
+    description:
+      'Defunctionalization is a way to transform higher-order ' +
+      'functions in closures, that can be compiled in a lower level ' +
+      'like LLVM, C, or even directly on Machine Code. For this task, ' +
+      'we can use Closure',
+    href: 'https://aripiprazole.medium.com/defunctionalization-5fd03b21813e',
     icon: FiBook,
   },
 ];
