@@ -87,4 +87,14 @@ export const ARTICLES = [
     href: 'https://aripiprazole.medium.com/defunctionalization-5fd03b21813e',
     icon: FiBook,
   },
+  {
+    title: 'Rebasing old commits for trans people',
+    description:
+      'Hello, my name is Gabrielle, and I’m a transgender person, ' +
+      'so it does mean that I changed my name, so here I want ' +
+      'to present some techniques to rebase your old commits into ' +
+      'new ones with your real name...',
+    href: 'https://aripiprazole.medium.com/rebasing-old-commits-for-trans-people-3740d1bc1157',
+    icon: FiBook,
+  },
 ];
