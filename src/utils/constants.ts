@@ -83,7 +83,7 @@ export const ARTICLES = [
       'Defunctionalization is a way to transform higher-order ' +
       'functions in closures, that can be compiled in a lower level ' +
       'like LLVM, C, or even directly on Machine Code. For this task, ' +
-      'we can use Closure',
+      'we can use Closure...',
     href: 'https://aripiprazole.medium.com/defunctionalization-5fd03b21813e',
     icon: FiBook,
   },
