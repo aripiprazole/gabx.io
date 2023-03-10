@@ -103,8 +103,8 @@ export const SOCIAL = [
     preview: Github,
   },
   {
-    href: 'https://gitlab.com/atomoxetine',
-    username: 'atomoxetine',
+    href: 'https://gitlab.com/lurasidone',
+    username: 'lurasidone',
     icon: FiGitlab,
     preview: Empty,
   },
