@@ -18,55 +18,20 @@
 
 import React from 'react';
 
-import {
-  FaGithub,
-  FaGitlab,
-  FaInstagram,
-  FaLinkedin,
-  FaMedium,
-  FaTwitter,
-} from 'react-icons/fa';
-
 import styles from '~/styles/components/Social.module.scss';
+
+import {SOCIAL} from '~/utils/constants';
 
 function Social() {
   return (
     <div className={styles.container}>
-      <li>
-        <a href='https://aripiprazole.medium.com'>
-          <FaMedium size='2.188rem' />
-        </a>
-      </li>
-
-      <li>
-        <a href='https://www.linkedin.com/in/gabrielle-guimarães-1aa393233'>
-          <FaLinkedin size='2.188rem' />
-        </a>
-      </li>
-
-      <li>
-        <a href='https://github.com/aripiprazole'>
-          <FaGithub size='2.188rem' />
-        </a>
-      </li>
-
-      <li>
-        <a href='https://gitlab.com/atomoxetine'>
-          <FaGitlab size='2.188rem' />
-        </a>
-      </li>
-
-      <li>
-        <a href='https://www.instagram.com/gabrielle1guim'>
-          <FaInstagram size='2.188rem' />
-        </a>
-      </li>
-
-      <li>
-        <a href='https://twitter.com/algebraic_gabi'>
-          <FaTwitter size='2.188rem' />
-        </a>
-      </li>
+      {SOCIAL.map(({href, icon: Icon}) => (
+        <li key={href}>
+          <a href={href}>
+            <Icon size='2.188rem' />
+          </a>
+        </li>
+      ))}
     </div>
   );
 }

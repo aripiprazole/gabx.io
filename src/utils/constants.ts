@@ -16,7 +16,16 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import {FiBook, FiTerminal} from 'react-icons/fi';
+import {
+  FiBook,
+  FiGithub,
+  FiGitlab,
+  FiInstagram,
+  FiLinkedin,
+  FiTerminal,
+  FiTwitter,
+} from 'react-icons/fi';
+import {TbBrandMedium} from 'react-icons/tb';
 
 export const ABOUT_ME =
   'My name is Gabrielle and I am a 17-year-old ' +
@@ -64,6 +73,33 @@ export const PROJECTS = [
       'or even a proxy...',
     href: 'https://github.com/aripiprazole/andesite',
     icon: FiTerminal,
+  },
+];
+
+export const SOCIAL = [
+  {
+    href: 'https://www.linkedin.com/in/gabrielle-guimarães-1aa393233',
+    icon: FiLinkedin,
+  },
+  {
+    href: 'https://aripiprazole.medium.com',
+    icon: TbBrandMedium,
+  },
+  {
+    href: 'https://github.com/aripiprazole',
+    icon: FiGithub,
+  },
+  {
+    href: 'https://gitlab.com/atomoxetine',
+    icon: FiGitlab,
+  },
+  {
+    href: 'https://instagram.com/gabrielle1guim',
+    icon: FiInstagram,
+  },
+  {
+    href: 'https://twitter.com/algebraic_gabi',
+    icon: FiTwitter,
   },
 ];
 
