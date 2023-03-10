@@ -20,6 +20,7 @@
 import React, {useEffect, useState} from 'react';
 
 import {FiExternalLink, FiLink} from 'react-icons/fi';
+import clsx from 'clsx';
 
 import styles from '~/styles/components/social/Github.module.scss';
 
@@ -85,8 +86,7 @@ function Github(props: Props): JSX.Element {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      {open && user && <Profile user={user} href={href} />}
-
+      {user && <Profile user={user} href={href} open={open} />}
       {children}
     </div>
   );
@@ -95,42 +95,45 @@ function Github(props: Props): JSX.Element {
 type ProfileProps = {
   user: User;
   href: string;
+  open: boolean;
 };
 
 function Profile(props: ProfileProps): JSX.Element {
-  const {user, href} = props;
+  const {user, href, open} = props;
 
   return (
-    <div className={styles.popover}>
+    <div className={clsx(styles.popover, !open && styles.closed)}>
       <div className={styles.arrow} />
-      <img src={user.avatar_url} alt={user.name} />
-      <div className={styles.info}>
-        <header>
-          <h3>{user.name}</h3>
-          {user.blog && (
-            <p>
-              <a href={user.blog}>
-                {simplifyLink(user.blog)} <FiLink />
-              </a>
-            </p>
-          )}
-          {user.twitter_username && (
-            <p>
-              <a href={`https://twitter.com/${user.twitter_username}`}>
-                {`twitter.com/${user.twitter_username}`} <FiLink />
-              </a>
-            </p>
-          )}
-          {user.company && <p>{user.company}</p>}
-          {user.location && <p>{user.location}</p>}
-        </header>
-        <main>{user.bio}</main>
-        <footer>
-          <a href={href} className={styles.readMore}>
-            <FiExternalLink />
-            Read more
-          </a>
-        </footer>
+      <div className={styles.content}>
+        <img src={user.avatar_url} alt={user.name} />
+        <div className={styles.info}>
+          <header>
+            <h3>{user.name}</h3>
+            {user.blog && (
+              <p>
+                <a href={user.blog}>
+                  {simplifyLink(user.blog)} <FiLink />
+                </a>
+              </p>
+            )}
+            {user.twitter_username && (
+              <p>
+                <a href={`https://twitter.com/${user.twitter_username}`}>
+                  {`twitter.com/${user.twitter_username}`} <FiLink />
+                </a>
+              </p>
+            )}
+            {user.company && <p>{user.company}</p>}
+            {user.location && <p>{user.location}</p>}
+          </header>
+          <main>{user.bio}</main>
+          <footer>
+            <a href={href} className={styles.readMore}>
+              <FiExternalLink />
+              Read more
+            </a>
+          </footer>
+        </div>
       </div>
     </div>
   );
