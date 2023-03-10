@@ -26,6 +26,8 @@ import {
   FiTwitter,
 } from 'react-icons/fi';
 import {TbBrandMedium} from 'react-icons/tb';
+import Github from '~/social/Github';
+import Empty from '~/social/Empty';
 
 export const ABOUT_ME =
   'My name is Gabrielle and I am a 17-year-old ' +
@@ -79,27 +81,39 @@ export const PROJECTS = [
 export const SOCIAL = [
   {
     href: 'https://www.linkedin.com/in/gabrielle-guimarães-1aa393233',
+    username: 'gabrielle-guimarães-1aa393233',
     icon: FiLinkedin,
+    preview: Empty,
   },
   {
     href: 'https://aripiprazole.medium.com',
+    username: 'aripiprazole',
     icon: TbBrandMedium,
+    preview: Empty,
   },
   {
     href: 'https://github.com/aripiprazole',
+    username: 'aripiprazole',
     icon: FiGithub,
+    preview: Github,
   },
   {
     href: 'https://gitlab.com/atomoxetine',
+    username: 'atomoxetine',
     icon: FiGitlab,
+    preview: Empty,
   },
   {
     href: 'https://instagram.com/gabrielle1guim',
+    username: 'gabrielle1guim',
     icon: FiInstagram,
+    preview: Empty,
   },
   {
     href: 'https://twitter.com/algebraic_gabi',
+    username: 'algebraic_gabi',
     icon: FiTwitter,
+    preview: Empty,
   },
 ];
 

@@ -16,26 +16,14 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import React from 'react';
+type Props = {
+  username: string;
+  href: string;
+  children: JSX.Element;
+};
 
-import styles from '~/styles/components/Social.module.scss';
-
-import {SOCIAL} from '~/utils/constants';
-
-function Social() {
-  return (
-    <div className={styles.container}>
-      {SOCIAL.map(({href, username, preview: Preview, icon: Icon}) => (
-        <li key={href}>
-          <Preview href={href} username={username}>
-            <a href={href}>
-              <Icon size='2.188rem' />
-            </a>
-          </Preview>
-        </li>
-      ))}
-    </div>
-  );
+function Empty(props: Props) {
+  return props.children;
 }
 
-export default Social;
+export default Empty;
