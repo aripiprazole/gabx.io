@@ -61,6 +61,10 @@ function Github(props: Props): JSX.Element {
       },
     })
       .then((response) => response.json())
+      .then((user) => {
+        user.blog = normalizeLink(user.blog);
+        return user;
+      })
       .then(setUser)
       .catch(setError)
       .catch(console.error)
@@ -106,14 +110,14 @@ function Profile(props: ProfileProps): JSX.Element {
           {user.blog && (
             <p>
               <a href={user.blog}>
-                {user.blog} <FiLink />
+                {simplifyLink(user.blog)} <FiLink />
               </a>
             </p>
           )}
           {user.twitter_username && (
             <p>
               <a href={`https://twitter.com/${user.twitter_username}`}>
-                {user.twitter_username} <FiLink />
+                {`twitter.com/${user.twitter_username}`} <FiLink />
               </a>
             </p>
           )}
@@ -130,6 +134,22 @@ function Profile(props: ProfileProps): JSX.Element {
       </div>
     </div>
   );
+}
+
+function normalizeLink(link: string): string | null {
+  if (!link) return null;
+
+  if (link.startsWith('http') || link.startsWith('https')) {
+    return link;
+  }
+
+  if (!link.includes('.')) return null;
+
+  return `https://${link}`;
+}
+
+function simplifyLink(link: string): string {
+  return link.replace(/https?:\/\//, '');
 }
 
 export default Github;
