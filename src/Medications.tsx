@@ -23,6 +23,7 @@ import {FiLink} from 'react-icons/fi';
 import {MEDICATIONS} from '~/utils/constants';
 
 import styles from '~/styles/components/Medications.module.scss';
+import Github from '~/social/Github';
 
 function Medications() {
   return (
@@ -38,10 +39,15 @@ function Medications() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img alt={medication} src={`/${medication}.png`} />
           </div>
-          <a href={`https://github.com/${medication}`}>
-            {medication}
-            <FiLink />
-          </a>
+          <Github
+            username={medication}
+            href={`https://github.com/${medication}`}
+          >
+            <a href={`https://github.com/${medication}`}>
+              {medication}
+              <FiLink />
+            </a>
+          </Github>
         </div>
       ))}
     </div>

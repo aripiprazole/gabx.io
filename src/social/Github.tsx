@@ -51,7 +51,7 @@ function Github(props: Props): JSX.Element {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${username}`, {
