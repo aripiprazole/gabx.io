@@ -51,7 +51,7 @@ function Github(props: Props): JSX.Element {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${username}`, {
@@ -63,9 +63,7 @@ function Github(props: Props): JSX.Element {
       .then((response) => response.json())
       .then(setUser)
       .catch(setError)
-      .catch((a) => {
-        console.error(a);
-      })
+      .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
 
