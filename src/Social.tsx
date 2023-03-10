@@ -18,7 +18,14 @@
 
 import React from 'react';
 
-import {FaGithub, FaInstagram, FaLinkedin, FaTwitter} from 'react-icons/fa';
+import {
+  FaGithub,
+  FaGitlab,
+  FaInstagram,
+  FaLinkedin,
+  FaMedium,
+  FaTwitter,
+} from 'react-icons/fa';
 
 import styles from '~/styles/components/Social.module.scss';
 
@@ -26,8 +33,8 @@ function Social() {
   return (
     <div className={styles.container}>
       <li>
-        <a href='https://www.instagram.com/gabrielle1guim'>
-          <FaInstagram size='2.188rem' />
+        <a href='https://aripiprazole.medium.com'>
+          <FaMedium size='2.188rem' />
         </a>
       </li>
 
@@ -40,6 +47,18 @@ function Social() {
       <li>
         <a href='https://github.com/aripiprazole'>
           <FaGithub size='2.188rem' />
+        </a>
+      </li>
+
+      <li>
+        <a href='https://gitlab.com/atomoxetine'>
+          <FaGitlab size='2.188rem' />
+        </a>
+      </li>
+
+      <li>
+        <a href='https://www.instagram.com/gabrielle1guim'>
+          <FaInstagram size='2.188rem' />
         </a>
       </li>
 
