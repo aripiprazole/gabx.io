@@ -17,6 +17,8 @@ $popover-height: 10rem;
   left: calc(50% - $arrow-size);
   background: transparent;
 
+  cursor: pointer;
+
   &::before {
     position: absolute;
     top: -$arrow-size;
@@ -25,6 +27,7 @@ $popover-height: 10rem;
     height: $arrow-size;
     content: ' ';
     padding: 1.8rem;
+    cursor: pointer;
   }
 }
 
