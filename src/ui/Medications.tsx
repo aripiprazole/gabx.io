@@ -60,10 +60,7 @@ function Substance(props: SubstanceProps): JSX.Element {
       </div>
       <Popover arrowRef={arrowRef}>
         <Popover.Items>
-          <Github
-            username={medication}
-            href={`https://github.com/${medication}`}
-          />
+          <Github username={medication} />
         </Popover.Items>
 
         <a href={`https://github.com/${medication}`}>

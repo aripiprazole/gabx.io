@@ -32,7 +32,7 @@ function Social() {
           <Popover>
             <Popover.Items>
               {preview.map((Preview, key) => (
-                <Preview key={key} href={href} username={username} />
+                <Preview key={key} username={username} />
               ))}
             </Popover.Items>
             <a href={href}>

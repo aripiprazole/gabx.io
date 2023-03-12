@@ -28,6 +28,7 @@ import {
 import {TbBrandMedium} from 'react-icons/tb';
 
 import Github from '~/ui/Github';
+import Gitlab from '~/ui/Gitlab';
 
 export const ABOUT_ME =
   'My name is Gabrielle and I am a 17-year-old ' +
@@ -106,7 +107,7 @@ export const SOCIAL = [
     href: 'https://gitlab.com/lurasidone',
     username: 'lurasidone',
     icon: FiGitlab,
-    preview: [],
+    preview: [Gitlab],
   },
   {
     href: 'https://instagram.com/gabrielle1guim',

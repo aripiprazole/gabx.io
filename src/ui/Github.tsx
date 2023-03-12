@@ -25,7 +25,6 @@ import styles from '~/styles/ui/Github.module.scss';
 
 type Props = {
   username: string;
-  href: string;
 };
 
 type User = {
@@ -44,7 +43,7 @@ type User = {
 };
 
 function Github(props: Props) {
-  const {username, href} = props;
+  const {username} = props;
 
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(false);
@@ -97,7 +96,10 @@ function Github(props: Props) {
         </header>
         <main>{user.bio}</main>
         <footer>
-          <a href={href} className={styles.readMore}>
+          <a
+            href={`https://github.com/${username}`}
+            className={styles.readMore}
+          >
             <FiExternalLink />
             Read more
           </a>
