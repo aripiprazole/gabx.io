@@ -35,7 +35,7 @@ function Social() {
               ))}
             </PopoverItems>
             <a href={href}>
-              <Icon size='2.188rem' />
+              <Icon size='28px' />
             </a>
           </Popover>
         </li>
