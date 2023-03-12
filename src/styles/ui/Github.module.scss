@@ -81,6 +81,16 @@ $popover-height: 10rem;
   }
 }
 
+.content main img {
+  width: 2.5rem;
+}
+
+.content main ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .readMore {
   color: var(--text-color);
   font-weight: bold;

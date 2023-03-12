@@ -90,7 +90,6 @@ function Gitlab(props: Props) {
           user.linkedin_url = `https://linkedin.com/in/${user.linkedin}`;
         }
         setUser(user);
-        return data;
       } catch (error) {
         setError(error as any);
       } finally {
