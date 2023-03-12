@@ -21,14 +21,15 @@ import {MOMENTUM_EASE} from '~/utils/constants';
 import {setStyles, setTransform} from '~/utils/momentum';
 
 type Props = HTMLProps<HTMLDivElement> & {
-  isMobile: boolean;
   children: React.ReactNode;
 };
 
-function Scroll(props: Props) {
-  if (props.isMobile) return <>{props.children}</>;
+function Scroll(props: Props & {isMobile: boolean}) {
+  const {isMobile, ...divProps} = props;
 
-  return <ScrollImpl {...props} />;
+  if (isMobile) return <>{props.children}</>;
+
+  return <ScrollImpl {...divProps} />;
 }
 
 function ScrollImpl(props: Props) {

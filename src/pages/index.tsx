@@ -19,7 +19,6 @@
 import React from 'react';
 
 import type {GetServerSideProps, NextPage} from 'next';
-import {userAgent} from 'next/server';
 import Head from 'next/head';
 
 import Root from '~/Root';
@@ -50,14 +49,12 @@ const Home: NextPage<Props> = ({isMobile}) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({req}) => {
-  const {device} = userAgent({
-    headers: new Headers(req.headers as Record<string, string>),
-  });
+export const getServerSideProps: GetServerSideProps = async ({query}) => {
+  const {viewport} = query;
 
   return {
     props: {
-      isMobile: device.type !== 'desktop',
+      isMobile: viewport !== 'desktop',
     },
   };
 };
