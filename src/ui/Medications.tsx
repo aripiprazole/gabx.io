@@ -23,7 +23,8 @@ import {FiLink} from 'react-icons/fi';
 import {MEDICATIONS} from '~/utils/constants';
 
 import styles from '~/styles/ui/Medications.module.scss';
-import Github from '~/social/Github';
+import Github from '~/ui/Github';
+import Popover from '~/ui/Popover';
 
 function Medications() {
   return (
@@ -56,16 +57,21 @@ function Substance(props: SubstanceProps): JSX.Element {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img alt={medication} src={`/${medication}.png`} />
       </div>
-      <Github
+      <Popover
         arrowRef={arrowRef}
-        username={medication}
-        href={`https://github.com/${medication}`}
+        items={[
+          <Github
+            key={0}
+            username={medication}
+            href={`https://github.com/${medication}`}
+          />,
+        ]}
       >
         <a href={`https://github.com/${medication}`}>
           {medication}
           <FiLink />
         </a>
-      </Github>
+      </Popover>
     </div>
   );
 }

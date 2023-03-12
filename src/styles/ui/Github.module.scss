@@ -1,46 +1,23 @@
+/*!
+ * My personal blog and portfolio website
+ * Copyright (C) 2023  Gabrielle Guimarães
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
 $arrow-size: 0.8rem;
 $popover-height: 10rem;
-
-.container {
-  position: relative;
-}
-
-.arrow {
-  width: $arrow-size;
-  height: $arrow-size;
-  border-left: $arrow-size solid transparent;
-  border-right: $arrow-size solid transparent;
-  border-top: $arrow-size solid var(--background-color);
-
-  position: absolute;
-  top: 100%;
-  left: calc(50% - $arrow-size);
-  background: transparent;
-
-  &::before {
-    position: absolute;
-    top: -$arrow-size;
-    left: -2.2rem;
-    width: $arrow-size;
-    height: $arrow-size;
-    content: ' ';
-    padding: 1.8rem;
-  }
-}
-
-.popover {
-  position: absolute;
-  bottom: calc(100% + 1.5rem);
-  left: calc(-14.5rem + 50%);
-  width: 29rem;
-  transform: scaleY(1);
-  transform-origin: bottom;
-  transition: transform 100ms;
-  background: var(--background-color);
-  display: flex;
-  border-radius: 1rem;
-  box-shadow: 0 6.25px 10px 0 rgba(0, 0, 0, 0.3);
-}
 
 .content {
   width: 29rem;
@@ -115,13 +92,4 @@ $popover-height: 10rem;
   &:hover {
     filter: opacity(0.8);
   }
-}
-
-.closed {
-  transform: scaleY(0);
-  height: 0;
-  max-height: 0;
-  width: 0;
-  opacity: 0;
-  overflow-y: hidden;
 }
