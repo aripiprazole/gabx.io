@@ -26,7 +26,6 @@ import styles from '~/styles/ui/Github.module.scss';
 
 type Props = {
   username: string;
-  href: string;
 };
 
 type User = {
