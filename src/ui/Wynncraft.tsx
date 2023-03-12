@@ -38,6 +38,7 @@ type User = {
   uuid: string;
   avatarUrl: string;
   webUrl: string;
+  characters: Character[];
   meta: {
     rank: string;
     totalLevels: number;
@@ -55,61 +56,26 @@ type User = {
 function Wynncraft(props: Props) {
   const {username} = props;
 
-  const [characters, setCharacters] = useState<Character[]>([]);
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    async function handleFetchCharacters() {
-      setLoading(true);
-      try {
-        // prettier-ignore
-        const response = await axios.get<Record<string, Character>>(`https://web-api.wynncraft.com/api/v3/player/${username}/characters`);
-        const classes = Object.values(response.data).map((character) => ({
-          type: character.type,
-          // prettier-ignore
-          classImageUrl: {
-            SHAMAN: 'https://cdn.wynncraft.com/nextgen/classes/icons/artboards/shaman.webp',
-            SKYSEER: 'https://cdn.wynncraft.com/nextgen/classes/icons/artboards/skyseer.webp',
-            MAGE: 'https://cdn.wynncraft.com/nextgen/classes/icons/artboards/mage.webp',
-            DARKWIZARD: 'https://cdn.wynncraft.com/nextgen/classes/icons/artboards/darkwizard.webp',
-            ARCHER: 'https://cdn.wynncraft.com/nextgen/classes/icons/artboards/archer.webp',
-            HUNTER: 'https://cdn.wynncraft.com/nextgen/classes/icons/artboards/hunter.webp',
-            ASSASSIN: 'https://cdn.wynncraft.com/nextgen/classes/icons/artboards/assassin.webp',
-            NINJA: 'https://cdn.wynncraft.com/nextgen/classes/icons/artboards/ninja.webp',
-          }[character.type],
-        }));
-        if (!classes) return null;
-        setCharacters(classes);
-      } catch (error) {
-        console.error(error);
-        setError(error as any);
-      } finally {
-        setLoading(false);
-      }
-    }
-
     async function handleFetchPlayer() {
-      setLoading(true);
       try {
-        // eslint-disable-next-line prettier/prettier
-        // prettier-ignore
-        const response = await axios.get(`https://web-api.wynncraft.com/api/v3/player/${username}`);
+        const response = await axios.get(`/api/wynncraft/${username}`);
         const user: User = response.data;
         if (!user) return null;
-        user.avatarUrl = `https://visage.surgeplay.com/bust/350/${user.uuid}`;
-        user.webUrl = `https://wynncraft.com/player/${username}/stats`;
+
         setUser(user);
       } catch (error) {
-        console.error(error);
         setError(error as any);
       } finally {
         setLoading(false);
       }
     }
 
-    handleFetchPlayer().then(handleFetchCharacters);
+    handleFetchPlayer().then();
   }, []);
 
   if (loading) return null;
@@ -134,7 +100,7 @@ function Wynncraft(props: Props) {
         </header>
         <main>
           <ul>
-            {characters.map((character) => (
+            {user.characters.map((character) => (
               <div key={character.type}>
                 <img src={character.classImageUrl} alt={character.type} />
               </div>
