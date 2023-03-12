@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import React, {useEffect, useRef, useState} from 'react';
+import React, {Children, useEffect, useRef, useState} from 'react';
 import clsx from 'clsx';
 
 import useMediaQuery from '~/utils/useMediaQuery';
@@ -38,13 +38,14 @@ function Popover(props: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const ref = useRef<HTMLDivElement | null>(null);
 
-  const items = React.Children.toArray(props.children)
-    .filter((node) => Boolean(node))
-    .filter((node: any) => node.type === PopoverItems);
+  const items = Children.toArray(props.children)
+    .filter((node: any) => Boolean(node.type) && Boolean(node.props))
+    .filter((node: any) => node.type.name === 'PopoverItems')
+    .flatMap((node: any) => Children.toArray(node.props.children));
 
-  const children = React.Children.toArray(props.children)
-    .filter((node) => Boolean(node))
-    .filter((node: any) => node.type !== PopoverItems);
+  const children = Children.toArray(props.children).filter(
+    (node: any) => node.type.name !== 'PopoverItems',
+  );
 
   useEffect(() => {
     function handleResize() {
@@ -76,7 +77,7 @@ function Popover(props: Props) {
       {!isMobile && items.length > 0 && (
         <div
           ref={containerRef}
-          className={clsx(styles.popover, !open && styles.closed)}
+          className={clsx(styles.popover, open && styles.open)}
         >
           <div ref={ref} className={styles.arrow} />
           {items.map((item) => item)}
@@ -86,14 +87,8 @@ function Popover(props: Props) {
   );
 }
 
-type PopoverItemsProps = {
-  children: React.ReactNode;
-};
-
-export function PopoverItems(props: PopoverItemsProps) {
-  const {children} = props;
-
-  return <>{children}</>;
-}
+Popover.Items = function PopoverItems() {
+  return null;
+} as React.FC<{children: React.ReactNode}>;
 
 export default Popover;

@@ -20,11 +20,12 @@ import React, {useRef} from 'react';
 
 import {FiLink} from 'react-icons/fi';
 
+import Github from '~/ui/Github';
+import Popover from '~/ui/Popover';
+
 import {MEDICATIONS} from '~/utils/constants';
 
 import styles from '~/styles/ui/Medications.module.scss';
-import Github from '~/ui/Github';
-import Popover, {PopoverItems} from '~/ui/Popover';
 
 function Medications() {
   return (
@@ -58,12 +59,12 @@ function Substance(props: SubstanceProps): JSX.Element {
         <img alt={medication} src={`/${medication}.png`} />
       </div>
       <Popover arrowRef={arrowRef}>
-        <PopoverItems>
+        <Popover.Items>
           <Github
             username={medication}
             href={`https://github.com/${medication}`}
           />
-        </PopoverItems>
+        </Popover.Items>
 
         <a href={`https://github.com/${medication}`}>
           {medication}

@@ -32,21 +32,26 @@ $popover-height: 10rem;
   position: absolute;
   bottom: calc(100% + 1.5rem);
   left: calc(-14.5rem + 50%);
-  width: 29rem;
-  transform: scaleY(1);
   transform-origin: bottom;
   transition: transform 100ms;
   background: var(--background-color);
   display: flex;
   border-radius: 1rem;
   box-shadow: 0 6.25px 10px 0 rgba(0, 0, 0, 0.3);
-}
 
-.closed {
-  transform: scaleY(0);
   height: 0;
   max-height: 0;
   width: 0;
   opacity: 0;
+  transform: scaleY(0);
   overflow-y: hidden;
+}
+
+.open {
+  height: initial;
+  max-height: initial;
+  width: 29rem;
+  opacity: 1;
+  transform: scaleY(1);
+  overflow-y: initial;
 }

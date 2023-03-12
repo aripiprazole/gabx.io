@@ -18,10 +18,11 @@
 
 import React from 'react';
 
+import Popover from '~/ui/Popover';
+
 import styles from '~/styles/ui/Social.module.scss';
 
 import {SOCIAL} from '~/utils/constants';
-import Popover, {PopoverItems} from '~/ui/Popover';
 
 function Social() {
   return (
@@ -29,11 +30,11 @@ function Social() {
       {SOCIAL.map(({href, username, preview, icon: Icon}) => (
         <li key={href}>
           <Popover>
-            <PopoverItems>
+            <Popover.Items>
               {preview.map((Preview, key) => (
                 <Preview key={key} href={href} username={username} />
               ))}
-            </PopoverItems>
+            </Popover.Items>
             <a href={href}>
               <Icon size='28px' />
             </a>
