@@ -22,7 +22,7 @@ import {FiLink} from 'react-icons/fi';
 
 import {MEDICATIONS} from '~/utils/constants';
 
-import styles from '~/styles/components/Medications.module.scss';
+import styles from '~/styles/ui/Medications.module.scss';
 import Github from '~/social/Github';
 
 function Medications() {

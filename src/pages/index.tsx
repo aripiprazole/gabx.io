@@ -21,10 +21,10 @@ import React from 'react';
 import type {GetServerSideProps, NextPage} from 'next';
 import Head from 'next/head';
 
-import Root from '~/Root';
-import Footer from '~/Footer';
-import Articles from '~/Articles';
-import Projects from '~/Projects';
+import Root from '~/ui/Root';
+import Footer from '~/ui/Footer';
+import Articles from '~/ui/Articles';
+import Projects from '~/ui/Projects';
 
 import {ABOUT_ME} from '~/utils/constants';
 

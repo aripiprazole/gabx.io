@@ -20,7 +20,7 @@ import React, {useState} from 'react';
 
 import {FiMoon, FiSun} from 'react-icons/fi';
 
-import styles from '~/styles/components/ThemeSwitcher.module.scss';
+import styles from '~/styles/ui/ThemeSwitcher.module.scss';
 
 type Theme = 'light' | 'dark' | undefined;
 

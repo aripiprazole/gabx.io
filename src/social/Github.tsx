@@ -22,7 +22,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {FiExternalLink, FiLink} from 'react-icons/fi';
 import clsx from 'clsx';
 
-import styles from '~/styles/components/social/Github.module.scss';
+import styles from '~/styles/ui/social/Github.module.scss';
 import useMediaQuery from '~/utils/useMediaQuery';
 
 type Props = {

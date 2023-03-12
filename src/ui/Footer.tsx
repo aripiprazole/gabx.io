@@ -18,32 +18,18 @@
 
 import React from 'react';
 
-import {ABOUT_PROJECTS, PROJECTS} from '~/utils/constants';
+import ThemeSwitcher from '~/ui/ThemeSwitcher';
+import Social from '~/ui/Social';
 
-import Work from '~/Work';
+import styles from '~/styles/ui/Footer.module.scss';
 
-import styles from '~/styles/components/Work.module.scss';
-
-function Projects() {
+function Footer() {
   return (
-    <div className={styles.container}>
-      <h2>My projects 🧪</h2>
-      <p>{ABOUT_PROJECTS}</p>
-
-      <ul className={styles.articles}>
-        {PROJECTS.map(({title, description, href, icon}) => (
-          <li key={title}>
-            <Work
-              title={title}
-              description={description}
-              href={href}
-              icon={icon}
-            />
-          </li>
-        ))}
-      </ul>
-    </div>
+    <footer className={styles.container}>
+      <ThemeSwitcher />
+      <Social />
+    </footer>
   );
 }
 
-export default Projects;
+export default Footer;

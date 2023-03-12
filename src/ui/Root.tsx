@@ -18,32 +18,29 @@
 
 import React from 'react';
 
-import {ABOUT_WORK, ARTICLES} from '~/utils/constants';
+import Sidebar from '~/ui/Sidebar';
+import Scroll from '~/ui/Scroll';
 
-import Work from '~/Work';
+import styles from '~/styles/ui/Root.module.scss';
 
-import styles from '~/styles/components/Work.module.scss';
+type Props = {
+  isMobile: boolean;
+  children: React.ReactNode;
+};
 
-function Articles() {
+function Root(props: Props) {
+  const {isMobile, children} = props;
+
   return (
-    <div className={styles.container}>
-      <h2>My work ️❤️️</h2>
-      <p>{ABOUT_WORK}</p>
-
-      <ul className={styles.articles}>
-        {ARTICLES.map(({title, description, href, icon}) => (
-          <li key={title}>
-            <Work
-              title={title}
-              description={description}
-              href={href}
-              icon={icon}
-            />
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Scroll isMobile={isMobile}>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <Sidebar />
+          <div className={styles.content}>{children}</div>
+        </main>
+      </div>
+    </Scroll>
   );
 }
 
-export default Articles;
+export default Root;

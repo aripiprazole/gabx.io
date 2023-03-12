@@ -18,18 +18,29 @@
 
 import React from 'react';
 
-import ThemeSwitcher from '~/ThemeSwitcher';
-import Social from '~/Social';
+import Image from 'next/image';
 
-import styles from '~/styles/components/Footer.module.scss';
+import Medications from '~/ui/Medications';
 
-function Footer() {
+import styles from '~/styles/ui/Sidebar.module.scss';
+
+function Sidebar() {
   return (
-    <footer className={styles.container}>
-      <ThemeSwitcher />
-      <Social />
-    </footer>
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        <div className={styles.profile}>
+          <Image
+            width={680}
+            height={680}
+            alt='Gabrielle Guimarães'
+            src='https://raw.githubusercontent.com/aripiprazole/aripiprazole/main/profile.png'
+          />
+        </div>
+
+        <Medications />
+      </div>
+    </div>
   );
 }
 
-export default Footer;
+export default Sidebar;

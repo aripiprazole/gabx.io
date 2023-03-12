@@ -18,29 +18,24 @@
 
 import React from 'react';
 
-import Image from 'next/image';
+import styles from '~/styles/ui/Social.module.scss';
 
-import Medications from '~/Medications';
+import {SOCIAL} from '~/utils/constants';
 
-import styles from '~/styles/components/Sidebar.module.scss';
-
-function Sidebar() {
+function Social() {
   return (
     <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <div className={styles.profile}>
-          <Image
-            width={680}
-            height={680}
-            alt='Gabrielle Guimarães'
-            src='https://raw.githubusercontent.com/aripiprazole/aripiprazole/main/profile.png'
-          />
-        </div>
-
-        <Medications />
-      </div>
+      {SOCIAL.map(({href, username, preview: Preview, icon: Icon}) => (
+        <li key={href}>
+          <Preview href={href} username={username}>
+            <a href={href}>
+              <Icon size='2.188rem' />
+            </a>
+          </Preview>
+        </li>
+      ))}
     </div>
   );
 }
 
-export default Sidebar;
+export default Social;

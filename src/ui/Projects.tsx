@@ -18,24 +18,32 @@
 
 import React from 'react';
 
-import styles from '~/styles/components/Social.module.scss';
+import {ABOUT_PROJECTS, PROJECTS} from '~/utils/constants';
 
-import {SOCIAL} from '~/utils/constants';
+import Work from '~/ui/Work';
 
-function Social() {
+import styles from '~/styles/ui/Work.module.scss';
+
+function Projects() {
   return (
     <div className={styles.container}>
-      {SOCIAL.map(({href, username, preview: Preview, icon: Icon}) => (
-        <li key={href}>
-          <Preview href={href} username={username}>
-            <a href={href}>
-              <Icon size='2.188rem' />
-            </a>
-          </Preview>
-        </li>
-      ))}
+      <h2>My projects 🧪</h2>
+      <p>{ABOUT_PROJECTS}</p>
+
+      <ul className={styles.articles}>
+        {PROJECTS.map(({title, description, href, icon}) => (
+          <li key={title}>
+            <Work
+              title={title}
+              description={description}
+              href={href}
+              icon={icon}
+            />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
-export default Social;
+export default Projects;

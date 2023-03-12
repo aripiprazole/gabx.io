@@ -18,29 +18,36 @@
 
 import React from 'react';
 
-import Sidebar from '~/Sidebar';
-import Scroll from '~/Scroll';
+import {FiExternalLink} from 'react-icons/fi';
+import {IconType} from 'react-icons';
 
-import styles from '~/styles/components/Root.module.scss';
+import styles from '~/styles/ui/Work.module.scss';
 
 type Props = {
-  isMobile: boolean;
-  children: React.ReactNode;
+  title: string;
+  description: string;
+  href: string;
+  icon: IconType;
 };
 
-function Root(props: Props) {
-  const {isMobile, children} = props;
+function Work(props: Props) {
+  const {title, description, href, icon: Icon} = props;
 
   return (
-    <Scroll isMobile={isMobile}>
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <Sidebar />
-          <div className={styles.content}>{children}</div>
-        </main>
+    <article className={styles.work}>
+      <div className={styles.icon}>
+        <Icon size={34} />
       </div>
-    </Scroll>
+      <main>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <a className={styles.readMore} href={href}>
+          <FiExternalLink />
+          Read more
+        </a>
+      </main>
+    </article>
   );
 }
 
-export default Root;
+export default Work;

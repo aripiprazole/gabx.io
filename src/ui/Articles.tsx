@@ -18,36 +18,32 @@
 
 import React from 'react';
 
-import {FiExternalLink} from 'react-icons/fi';
-import {IconType} from 'react-icons';
+import {ABOUT_WORK, ARTICLES} from '~/utils/constants';
 
-import styles from '~/styles/components/Work.module.scss';
+import Work from '~/ui/Work';
 
-type Props = {
-  title: string;
-  description: string;
-  href: string;
-  icon: IconType;
-};
+import styles from '~/styles/ui/Work.module.scss';
 
-function Work(props: Props) {
-  const {title, description, href, icon: Icon} = props;
-
+function Articles() {
   return (
-    <article className={styles.work}>
-      <div className={styles.icon}>
-        <Icon size={34} />
-      </div>
-      <main>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <a className={styles.readMore} href={href}>
-          <FiExternalLink />
-          Read more
-        </a>
-      </main>
-    </article>
+    <div className={styles.container}>
+      <h2>My work ️❤️️</h2>
+      <p>{ABOUT_WORK}</p>
+
+      <ul className={styles.articles}>
+        {ARTICLES.map(({title, description, href, icon}) => (
+          <li key={title}>
+            <Work
+              title={title}
+              description={description}
+              href={href}
+              icon={icon}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
-export default Work;
+export default Articles;
