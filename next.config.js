@@ -17,6 +17,7 @@ const nextConfig = {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
+    config.optimization.minimize = false;
 
     return config;
   },

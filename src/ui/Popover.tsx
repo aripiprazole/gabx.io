@@ -16,7 +16,13 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import React, {Children, useEffect, useRef, useState} from 'react';
+import React, {
+  Children,
+  PropsWithChildren,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import clsx from 'clsx';
 
 import useMediaQuery from '~/utils/useMediaQuery';
@@ -87,8 +93,10 @@ function Popover(props: Props) {
   );
 }
 
-Popover.Items = function PopoverItems() {
+export function PopoverItems(_props: PropsWithChildren) {
   return null;
-} as React.FC<{children: React.ReactNode}>;
+}
+
+Popover.Items = PopoverItems;
 
 export default Popover;
