@@ -58,3 +58,90 @@ $popover-height: 10rem;
   transform: scaleY(1);
   overflow-y: initial;
 }
+
+.content {
+  width: 29rem;
+  margin: 1.5rem;
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: hidden;
+  overflow-y: visible;
+
+  > img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+  flex: 1;
+}
+
+.info > * {
+  text-overflow: clip;
+  min-width: 15rem;
+}
+
+.info footer {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.info header {
+  display: flex;
+  flex-direction: column;
+
+  > p::before {
+    content: '~';
+    margin-right: 0.1rem;
+  }
+
+  > p {
+    display: flex;
+    gap: 0.5rem;
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  > p a {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  > h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+}
+
+.content main {
+  & img {
+    width: 2.5rem;
+  }
+
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+.readMore {
+  color: var(--text-color);
+  font-weight: bold;
+  transition: 300ms;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    filter: opacity(0.8);
+  }
+}

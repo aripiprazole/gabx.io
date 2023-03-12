@@ -22,7 +22,7 @@ import axios from 'axios';
 
 import {FiExternalLink, FiLink} from 'react-icons/fi';
 
-import styles from '~/styles/ui/Github.module.scss';
+import styles from '~/styles/ui/Gitlab.module.scss';
 
 type Props = {
   username: string;
