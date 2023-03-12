@@ -44,7 +44,7 @@ function Theme() {
       className={styles.container}
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
-      {theme === 'light' ? <FiSun size='2rem' /> : <FiMoon size='2rem' />}
+      {theme === 'light' ? <FiSun size='32px' /> : <FiMoon size='32px' />}
     </button>
   );
 }
