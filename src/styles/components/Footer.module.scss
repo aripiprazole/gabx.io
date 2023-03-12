@@ -1,7 +1,14 @@
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 568px) {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
 
   width: 100%;
 }
-

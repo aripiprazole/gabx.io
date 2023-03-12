@@ -29,7 +29,7 @@ function ThemeSwitcher() {
 
   return (
     <button className={styles.container}>
-      {theme === 'light' ? <FiSun size='1.8rem' /> : <FiMoon size='1.8rem' />}
+      {theme === 'light' ? <FiSun size='2rem' /> : <FiMoon size='2rem' />}
     </button>
   );
 }
