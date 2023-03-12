@@ -18,7 +18,6 @@
 
 import {
   FiBook,
-  FiEye,
   FiGithub,
   FiGitlab,
   FiInstagram,
@@ -31,6 +30,7 @@ import {TbBrandMedium} from 'react-icons/tb';
 import Github from '~/ui/Github';
 import Gitlab from '~/ui/Gitlab';
 import Wynncraft from '~/ui/Wynncraft';
+import WynncraftIcon from '~/assets/WynncraftIcon';
 
 export const ABOUT_ME =
   'My name is Gabrielle and I am a 17-year-old ' +
@@ -126,7 +126,7 @@ export const SOCIAL = [
   {
     href: 'https://wynncraft.com/stats/player/Brexpiprazole',
     username: 'Brexpiprazole',
-    icon: FiEye,
+    icon: WynncraftIcon,
     preview: [Wynncraft],
   },
 ];
