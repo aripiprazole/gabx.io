@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import React from 'react';
+import React, {useRef} from 'react';
 
 import {FiLink} from 'react-icons/fi';
 
@@ -30,26 +30,42 @@ function Medications() {
     <div className={styles.container}>
       <h3>Meet the other compounds! 🙂</h3>
       {MEDICATIONS.map((medication) => (
-        <div key={medication} className={styles.medication}>
-          ~
-          <div
-            style={{background: '#fefefe!important'}}
-            className={styles.icon}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img alt={medication} src={`/${medication}.png`} />
-          </div>
-          <Github
-            username={medication}
-            href={`https://github.com/${medication}`}
-          >
-            <a href={`https://github.com/${medication}`}>
-              {medication}
-              <FiLink />
-            </a>
-          </Github>
-        </div>
+        <Substance medication={medication} key={medication} />
       ))}
+    </div>
+  );
+}
+
+type SubstanceProps = {
+  medication: string;
+};
+
+function Substance(props: SubstanceProps): JSX.Element {
+  const {medication} = props;
+
+  const arrowRef = useRef<HTMLDivElement | null>(null);
+
+  return (
+    <div className={styles.medication}>
+      ~
+      <div
+        ref={arrowRef}
+        style={{background: '#fefefe!important'}}
+        className={styles.icon}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img alt={medication} src={`/${medication}.png`} />
+      </div>
+      <Github
+        arrowRef={arrowRef}
+        username={medication}
+        href={`https://github.com/${medication}`}
+      >
+        <a href={`https://github.com/${medication}`}>
+          {medication}
+          <FiLink />
+        </a>
+      </Github>
     </div>
   );
 }

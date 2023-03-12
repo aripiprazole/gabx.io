@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {FiExternalLink, FiLink} from 'react-icons/fi';
 import clsx from 'clsx';
@@ -28,6 +28,7 @@ import useMediaQuery from '~/utils/useMediaQuery';
 type Props = {
   username: string;
   href: string;
+  arrowRef?: React.RefObject<HTMLDivElement>;
   children: JSX.Element;
 };
 
@@ -47,7 +48,7 @@ type User = {
 };
 
 function Github(props: Props): JSX.Element {
-  const {username, href, children} = props;
+  const {username, href, arrowRef, children} = props;
 
   const isMobile = useMediaQuery('(max-width: 768px)');
 
@@ -89,7 +90,9 @@ function Github(props: Props): JSX.Element {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      {!isMobile && user && <Profile user={user} href={href} open={open} />}
+      {!isMobile && user && (
+        <Profile arrowRef={arrowRef} user={user} href={href} open={open} />
+      )}
       {children}
     </div>
   );
@@ -99,14 +102,41 @@ type ProfileProps = {
   user: User;
   href: string;
   open: boolean;
+  arrowRef?: React.RefObject<HTMLDivElement>;
 };
 
 function Profile(props: ProfileProps): JSX.Element {
-  const {user, href, open} = props;
+  const {arrowRef, user, href, open} = props;
+
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    function handleResize() {
+      if (!ref.current || !arrowRef?.current) return;
+
+      const rect = ref.current.getBoundingClientRect();
+      const containerRect = containerRef.current!.getBoundingClientRect();
+      const arrowRect = arrowRef.current!.getBoundingClientRect();
+
+      const left = arrowRect.x - containerRect.x + rect.width / 4;
+
+      ref.current.style.left = `${left}px`;
+    }
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, [arrowRef, ref]);
 
   return (
-    <div className={clsx(styles.popover, !open && styles.closed)}>
-      <div className={styles.arrow} />
+    <div
+      ref={containerRef}
+      className={clsx(styles.popover, !open && styles.closed)}
+    >
+      <div ref={ref} className={styles.arrow} />
       <div className={styles.content}>
         <img src={user.avatar_url} alt={user.name} />
         <div className={styles.info}>
