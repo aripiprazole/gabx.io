@@ -25,12 +25,11 @@ import styles from '~/styles/ui/Popover.module.scss';
 
 type Props = {
   arrowRef?: React.RefObject<HTMLDivElement>;
-  items: React.ReactNode[];
   children: React.ReactNode;
 };
 
 function Popover(props: Props) {
-  const {arrowRef, items, children} = props;
+  const {arrowRef} = props;
 
   const isMobile = useMediaQuery('(max-width: 768px)');
 
@@ -38,6 +37,14 @@ function Popover(props: Props) {
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const ref = useRef<HTMLDivElement | null>(null);
+
+  const items = React.Children.toArray(props.children)
+    .filter((node) => Boolean(node))
+    .filter((node: any) => node.type === PopoverItems);
+
+  const children = React.Children.toArray(props.children)
+    .filter((node) => Boolean(node))
+    .filter((node: any) => node.type !== PopoverItems);
 
   useEffect(() => {
     function handleResize() {
@@ -77,6 +84,16 @@ function Popover(props: Props) {
       )}
     </div>
   );
+}
+
+type PopoverItemsProps = {
+  children: React.ReactNode;
+};
+
+export function PopoverItems(props: PopoverItemsProps) {
+  const {children} = props;
+
+  return <>{children}</>;
 }
 
 export default Popover;

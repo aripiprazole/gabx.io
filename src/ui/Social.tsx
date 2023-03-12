@@ -21,18 +21,19 @@ import React from 'react';
 import styles from '~/styles/ui/Social.module.scss';
 
 import {SOCIAL} from '~/utils/constants';
-import Popover from '~/ui/Popover';
+import Popover, {PopoverItems} from '~/ui/Popover';
 
 function Social() {
   return (
     <div className={styles.container}>
       {SOCIAL.map(({href, username, preview, icon: Icon}) => (
         <li key={href}>
-          <Popover
-            items={preview.map((Preview, i) => (
-              <Preview key={i} href={href} username={username} />
-            ))}
-          >
+          <Popover>
+            <PopoverItems>
+              {preview.map((Preview, key) => (
+                <Preview key={key} href={href} username={username} />
+              ))}
+            </PopoverItems>
             <a href={href}>
               <Icon size='2.188rem' />
             </a>

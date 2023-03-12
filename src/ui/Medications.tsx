@@ -24,7 +24,7 @@ import {MEDICATIONS} from '~/utils/constants';
 
 import styles from '~/styles/ui/Medications.module.scss';
 import Github from '~/ui/Github';
-import Popover from '~/ui/Popover';
+import Popover, {PopoverItems} from '~/ui/Popover';
 
 function Medications() {
   return (
@@ -57,16 +57,14 @@ function Substance(props: SubstanceProps): JSX.Element {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img alt={medication} src={`/${medication}.png`} />
       </div>
-      <Popover
-        arrowRef={arrowRef}
-        items={[
+      <Popover arrowRef={arrowRef}>
+        <PopoverItems>
           <Github
-            key={0}
             username={medication}
             href={`https://github.com/${medication}`}
-          />,
-        ]}
-      >
+          />
+        </PopoverItems>
+
         <a href={`https://github.com/${medication}`}>
           {medication}
           <FiLink />
