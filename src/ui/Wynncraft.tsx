@@ -86,6 +86,11 @@ function Wynncraft(props: Props) {
     <div className={styles.content}>
       <img src={user.avatarUrl} alt={user.username} />
       <div className={styles.info}>
+        <img
+          className={styles.background}
+          src='https://cdn.wynncraft.com/nextgen/planks-texture.webp'
+          alt='Background'
+        />
         <header>
           {user.meta.rank ? (
             <h3 style={{color: user.meta.rankColor.sub}}>

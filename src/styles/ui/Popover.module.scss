@@ -66,11 +66,13 @@ $popover-height: 10rem;
   gap: 1.2rem;
   overflow-x: hidden;
   overflow-y: visible;
+  z-index: 2;
 
   > img {
     width: 5rem;
     height: 5rem;
     border-radius: 1rem;
+    z-index: 3;
   }
 }
 
@@ -80,6 +82,7 @@ $popover-height: 10rem;
   gap: 0.5rem;
   overflow: hidden;
   flex: 1;
+  z-index: 2;
 }
 
 .info > * {
