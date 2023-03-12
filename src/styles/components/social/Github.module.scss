@@ -5,10 +5,6 @@ $popover-height: 10rem;
   position: relative;
 }
 
-.wrapper {
-
-}
-
 .arrow {
   width: $arrow-size;
   height: $arrow-size;
@@ -40,7 +36,9 @@ $popover-height: 10rem;
   bottom: calc(100% + 1.5rem);
   left: calc(-14.5rem + 50%);
   width: 29rem;
-  transition: width 0.5s;
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 100ms;
   background: var(--background-color);
   display: flex;
   justify-content: center;
@@ -124,7 +122,9 @@ $popover-height: 10rem;
 }
 
 .closed {
+  transform: scaleY(0);
   height: 0;
+  max-height: 0;
   width: 0;
   opacity: 0;
   overflow-y: hidden;
