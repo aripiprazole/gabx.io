@@ -13,17 +13,14 @@ $popover-height: 10rem;
   border-top: $arrow-size solid var(--background-color);
 
   position: absolute;
-  margin: auto;
   top: 100%;
+  left: calc(50% - $arrow-size);
   background: transparent;
-
-  display: flex;
-  justify-content: center;
 
   &::before {
     position: absolute;
-    margin: auto;
     top: -$arrow-size;
+    left: -2.2rem;
     width: $arrow-size;
     height: $arrow-size;
     content: ' ';
@@ -41,7 +38,6 @@ $popover-height: 10rem;
   transition: transform 100ms;
   background: var(--background-color);
   display: flex;
-  justify-content: center;
   border-radius: 1rem;
   box-shadow: 0 6.25px 10px 0 rgba(0, 0, 0, 0.3);
 }
