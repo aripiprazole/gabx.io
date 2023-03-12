@@ -22,6 +22,7 @@ import Sidebar from '~/ui/Sidebar';
 import Scroll from '~/ui/Scroll';
 
 import styles from '~/styles/ui/Root.module.scss';
+import {ThemeProvider} from '~/ui/Theme';
 
 type Props = {
   isMobile: boolean;
@@ -33,12 +34,14 @@ function Root(props: Props) {
 
   return (
     <Scroll isMobile={isMobile}>
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <Sidebar />
-          <div className={styles.content}>{children}</div>
-        </main>
-      </div>
+      <ThemeProvider>
+        <div className={styles.container}>
+          <main className={styles.main}>
+            <Sidebar />
+            <div className={styles.content}>{children}</div>
+          </main>
+        </div>
+      </ThemeProvider>
     </Scroll>
   );
 }

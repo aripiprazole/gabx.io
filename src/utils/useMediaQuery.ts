@@ -30,7 +30,7 @@ const useMediaQuery = (query: string) => {
         setDidMatch(event.matches),
       );
     };
-  });
+  }, [query]);
 
   return didMatch;
 };

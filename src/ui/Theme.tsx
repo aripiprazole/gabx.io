@@ -16,22 +16,53 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import React, {useState} from 'react';
+import React, {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 
 import {FiMoon, FiSun} from 'react-icons/fi';
 
 import styles from '~/styles/ui/ThemeSwitcher.module.scss';
+import useMediaQuery from '~/utils/useMediaQuery';
+import clsx from 'clsx';
 
 type Theme = 'light' | 'dark' | undefined;
 
-function ThemeSwitcher() {
-  const [theme] = useState<Theme>();
+type ThemeContextType = [Theme, (theme: Theme) => void];
+
+export const ThemeContext = createContext<ThemeContextType>(null as any);
+
+function Theme() {
+  const [theme, setTheme] = useContext(ThemeContext);
 
   return (
-    <button className={styles.container}>
+    <button
+      className={styles.container}
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+    >
       {theme === 'light' ? <FiSun size='2rem' /> : <FiMoon size='2rem' />}
     </button>
   );
 }
 
-export default ThemeSwitcher;
+export function ThemeProvider(props: PropsWithChildren) {
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+
+  const [theme, setTheme] = useState<Theme>('dark');
+
+  useEffect(() => {
+    setTheme(prefersDarkMode ? 'dark' : 'light');
+  }, [prefersDarkMode]);
+
+  return (
+    <ThemeContext.Provider value={[theme, setTheme]}>
+      <div className={clsx(theme && `theme--${theme}`)}>{props.children}</div>
+    </ThemeContext.Provider>
+  );
+}
+
+export default Theme;

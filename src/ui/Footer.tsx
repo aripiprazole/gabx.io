@@ -18,7 +18,7 @@
 
 import React from 'react';
 
-import ThemeSwitcher from '~/ui/ThemeSwitcher';
+import Theme from '~/ui/Theme';
 import Social from '~/ui/Social';
 
 import styles from '~/styles/ui/Footer.module.scss';
@@ -26,7 +26,7 @@ import styles from '~/styles/ui/Footer.module.scss';
 function Footer() {
   return (
     <footer className={styles.container}>
-      <ThemeSwitcher />
+      <Theme />
       <Social />
     </footer>
   );
