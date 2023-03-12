@@ -16,31 +16,23 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import React from 'react';
+import {useEffect, useState} from 'react';
 
-import Sidebar from '~/Sidebar';
-import Scroll from '~/Scroll';
+const useMediaQuery = (query: string) => {
+  const [didMatch, setDidMatch] = useState(false);
+  useEffect(() => {
+    const watcher = window.matchMedia(query);
+    setDidMatch(watcher.matches);
 
-import styles from '~/styles/components/Root.module.scss';
+    watcher.addEventListener('change', (event) => setDidMatch(event.matches));
+    return () => {
+      watcher.removeEventListener('change', (event) =>
+        setDidMatch(event.matches),
+      );
+    };
+  });
 
-type Props = {
-  isMobile: boolean;
-  children: React.ReactNode;
+  return didMatch;
 };
 
-function Root(props: Props) {
-  const {isMobile, children} = props;
-
-  return (
-    <Scroll isMobile={isMobile}>
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <Sidebar />
-          <div className={styles.content}>{children}</div>
-        </main>
-      </div>
-    </Scroll>
-  );
-}
-
-export default Root;
+export default useMediaQuery;

@@ -21,15 +21,21 @@ import {MOMENTUM_EASE} from '~/utils/constants';
 import {setStyles, setTransform} from '~/utils/momentum';
 
 type Props = HTMLProps<HTMLDivElement> & {
+  isMobile: boolean;
   children: React.ReactNode;
 };
 
 function Scroll(props: Props) {
+  if (props.isMobile) return <>{props.children}</>;
+
+  return <ScrollImpl {...props} />;
+}
+
+function ScrollImpl(props: Props) {
   const {children, ...divProps} = props;
 
   const spacer = useRef<HTMLDivElement>(null);
   const container = useRef<HTMLDivElement>(null);
-
   let yCurrent = 0;
   let yScroll = 0;
   let animationFrame: number | null = null;

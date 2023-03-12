@@ -18,7 +18,8 @@
 
 import React from 'react';
 
-import type {NextPage} from 'next';
+import type {GetServerSideProps, NextPage} from 'next';
+import {userAgent} from 'next/server';
 import Head from 'next/head';
 
 import Root from '~/Root';
@@ -28,9 +29,13 @@ import Projects from '~/Projects';
 
 import {ABOUT_ME} from '~/utils/constants';
 
-const Home: NextPage = () => {
+type Props = {
+  isMobile: boolean;
+};
+
+const Home: NextPage<Props> = ({isMobile}) => {
   return (
-    <Root>
+    <Root isMobile={isMobile}>
       <Head>
         <title>Hi, I&apos;m Gabi! </title>
         <link rel='icon' href='/favicon.ico' />
@@ -43,6 +48,18 @@ const Home: NextPage = () => {
       <Footer />
     </Root>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async ({req}) => {
+  const {device} = userAgent({
+    headers: new Headers(req.headers as Record<string, string>),
+  });
+
+  return {
+    props: {
+      isMobile: device.type !== 'desktop',
+    },
+  };
 };
 
 export default Home;

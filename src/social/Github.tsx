@@ -23,6 +23,7 @@ import {FiExternalLink, FiLink} from 'react-icons/fi';
 import clsx from 'clsx';
 
 import styles from '~/styles/components/social/Github.module.scss';
+import useMediaQuery from '~/utils/useMediaQuery';
 
 type Props = {
   username: string;
@@ -47,6 +48,8 @@ type User = {
 
 function Github(props: Props): JSX.Element {
   const {username, href, children} = props;
+
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(false);
@@ -86,7 +89,7 @@ function Github(props: Props): JSX.Element {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      {user && <Profile user={user} href={href} open={open} />}
+      {!isMobile && user && <Profile user={user} href={href} open={open} />}
       {children}
     </div>
   );
