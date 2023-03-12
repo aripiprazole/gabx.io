@@ -142,10 +142,7 @@ function Wynncraft(props: Props) {
           </ul>
         </main>
         <footer>
-          <a
-            href={`https://github.com/${username}`}
-            className={styles.readMore}
-          >
+          <a href={user.webUrl} className={styles.readMore}>
             <FiExternalLink />
             Read more
           </a>
