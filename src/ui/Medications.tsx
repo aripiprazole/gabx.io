@@ -21,6 +21,7 @@ import React, {useRef} from 'react';
 import {FiLink} from 'react-icons/fi';
 
 import Github from '~/ui/Github';
+import Psychonaut from '~/ui/Psychonaut';
 import Popover from '~/ui/Popover';
 
 import {MEDICATIONS} from '~/utils/constants';
@@ -60,6 +61,7 @@ function Substance(props: SubstanceProps): JSX.Element {
       </div>
       <Popover arrowRef={arrowRef}>
         <Popover.Items>
+          <Psychonaut username={medication} />
           <Github username={medication} />
         </Popover.Items>
 

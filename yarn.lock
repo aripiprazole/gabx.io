@@ -2111,12 +2111,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.0.5":
-  version: 18.0.5
-  resolution: "@types/react-dom@npm:18.0.5"
+"@types/react-dom@npm:^18.0.11":
+  version: 18.0.11
+  resolution: "@types/react-dom@npm:18.0.11"
   dependencies:
     "@types/react": "*"
-  checksum: cd48b81950f499b52a3f0c08261f00046f9b7c96699fa249c9664e257e820daf6ecac815cd1028cebc9d105094adc39d047d1efd79214394b8b2d515574c0787
+  checksum: 579691e4d5ec09688087568037c35edf8cfb1ab3e07f6c60029280733ee7b5c06d66df6fcc90786702c93ac8cb13bc7ff16c79ddfc75d082938fbaa36e1cdbf4
   languageName: node
   linkType: hard
 
@@ -2606,7 +2606,7 @@ __metadata:
     "@svgr/webpack": ^6.5.1
     "@types/node": 18.0.1
     "@types/react": 18.0.14
-    "@types/react-dom": 18.0.5
+    "@types/react-dom": ^18.0.11
     "@types/styled-components": ^5.1.25
     "@typescript-eslint/eslint-plugin": ^5.30.4
     "@typescript-eslint/parser": ^5.30.4
@@ -2622,7 +2622,7 @@ __metadata:
     next: ^13.1.6
     prettier: ^2.8.4
     react: 18.2.0
-    react-dom: 18.2.0
+    react-dom: ^18.2.0
     react-icons: ^4.4.0
     sass: ^1.58.3
     typescript: 4.7.4
@@ -5572,7 +5572,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:18.2.0":
+"react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:

@@ -38,6 +38,7 @@ function Popover(props: Props) {
   const {arrowRef} = props;
 
   const isMobile = useMediaQuery('(max-width: 768px)');
+  const screen = useMediaQuery('screen');
 
   const [open, setOpen] = useState(false);
 
@@ -48,6 +49,10 @@ function Popover(props: Props) {
     .filter((node: any) => Boolean(node.type) && Boolean(node.props))
     .filter((node: any) => node.type.name === 'PopoverItems')
     .flatMap((node: any) => Children.toArray(node.props.children));
+
+  const computedItems = items
+    .flatMap((node: any) => node?.props?.children ?? [node])
+    .filter((node) => node);
 
   const children = Children.toArray(props.children).filter(
     (node: any) => node.type.name !== 'PopoverItems',
@@ -86,7 +91,15 @@ function Popover(props: Props) {
           className={clsx(styles.popover, open && styles.open)}
         >
           <div ref={ref} className={styles.arrow} />
-          {items.map((item) => item)}
+          {screen &&
+            items.map((item, i) => (
+              <span key={i}>
+                {item}
+                {computedItems.length > 1 && i !== computedItems.length - 1 && (
+                  <span className={styles.divider} />
+                )}
+              </span>
+            ))}
         </div>
       )}
     </div>

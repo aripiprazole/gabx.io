@@ -26,10 +26,13 @@ import {
   FiTwitter,
 } from 'react-icons/fi';
 import {TbBrandMedium} from 'react-icons/tb';
+import {GiChemicalDrop} from 'react-icons/gi';
 
 import Github from '~/ui/Github';
 import Gitlab from '~/ui/Gitlab';
 import Wynncraft from '~/ui/Wynncraft';
+import Psychonaut from '~/ui/Psychonaut';
+
 import WynncraftIcon from '~/assets/WynncraftIcon';
 
 export const ABOUT_ME =
@@ -128,6 +131,12 @@ export const SOCIAL = [
     username: 'Brexpiprazole',
     icon: WynncraftIcon,
     preview: [Wynncraft],
+  },
+  {
+    href: 'https://en.wikipedia.org/wiki/Aripiprazole',
+    username: 'Aripiprazole',
+    icon: GiChemicalDrop,
+    preview: [Psychonaut],
   },
 ];
 
