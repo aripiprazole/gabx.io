@@ -63,7 +63,6 @@ function Psychonaut(props: Props) {
         };
         setSubstance(substance);
       } catch (error) {
-        console.error(error);
         setError(error as any);
       } finally {
         setLoading(false);

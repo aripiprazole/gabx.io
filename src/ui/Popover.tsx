@@ -50,10 +50,6 @@ function Popover(props: Props) {
     .filter((node: any) => node.type.name === 'PopoverItems')
     .flatMap((node: any) => Children.toArray(node.props.children));
 
-  const computedItems = items
-    .flatMap((node: any) => node?.props?.children ?? [node])
-    .filter((node) => node);
-
   const children = Children.toArray(props.children).filter(
     (node: any) => node.type.name !== 'PopoverItems',
   );
@@ -91,15 +87,9 @@ function Popover(props: Props) {
           className={clsx(styles.popover, open && styles.open)}
         >
           <div ref={ref} className={styles.arrow} />
-          {screen &&
-            items.map((item, i) => (
-              <span key={i}>
-                {item}
-                {computedItems.length > 1 && i !== computedItems.length - 1 && (
-                  <span className={styles.divider} />
-                )}
-              </span>
-            ))}
+          <span className={styles.items}>
+            {screen && items.map((item, i) => <span key={i}>{item}</span>)}
+          </span>
         </div>
       )}
     </div>
