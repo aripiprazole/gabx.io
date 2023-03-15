@@ -17,31 +17,6 @@
  */
 @import "./variables";
 
-:root {
-  --background-color: #fefefe;
-  --text-color: #1a1a1a;
-  --text-color-dimmed: #1c1c1c;
-  --light-mode-border: #1c1c1c;
-
-  @media(prefers-color-scheme: dark) {
-    --background-color: #1a1c1e;
-    --text-color: #fefefe;
-    --text-color-dimmed: #dadada;
-    --light-mode-border: transparent;
-  }
-}
-
-[data-darkreader-mode="dynamic"] {
-  --background-color: #1a1c1e;
-  --text-color: #fefefe;
-  --text-color-dimmed: #dadada;
-  --light-mode-border: transparent;
-
-  --darkreader-bg--background-color: var(--background-color);
-  --darkreader-text--text-color: var(--text-color);
-  --darkreader-text--text-color-dimmed: var(--text-color-dimmed);
-}
-
 ::-webkit-scrollbar {
   width: 0 !important
 }
@@ -94,7 +69,7 @@ li {
 }
 
 .theme--dark {
-  --background-color: #1a1c1e;
+  --background-color: #0e0c0e;
   --text-color: #fefefe;
   --text-color-dimmed: #dadada;
   --light-mode-border: transparent;
