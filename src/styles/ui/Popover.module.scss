@@ -14,7 +14,7 @@ $popover-height: 10rem;
 
   position: absolute;
   top: 100%;
-  left: calc(50% - $arrow-size);
+  left: calc(50% - ($arrow-size * 3));
   background: transparent;
 
   cursor: pointer;
