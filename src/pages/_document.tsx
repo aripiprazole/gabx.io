@@ -24,7 +24,7 @@ import {ABOUT_ME} from '~/utils/constants';
 class AppDocument extends Document {
   public render(): JSX.Element {
     return (
-      <Html>
+      <Html lang='en-US'>
         <Head>
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
