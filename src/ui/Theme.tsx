@@ -41,6 +41,7 @@ function Theme() {
 
   return (
     <button
+      aria-label='Switch theme'
       className={styles.container}
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
