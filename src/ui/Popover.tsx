@@ -28,6 +28,7 @@ import clsx from 'clsx';
 import useMediaQuery from '~/utils/useMediaQuery';
 
 import styles from '~/styles/ui/Popover.module.scss';
+import dynamic from 'next/dynamic';
 
 type Props = {
   arrowRef?: React.RefObject<HTMLDivElement>;
@@ -47,11 +48,11 @@ function Popover(props: Props) {
 
   const items = Children.toArray(props.children)
     .filter((node: any) => Boolean(node.type) && Boolean(node.props))
-    .filter((node: any) => node.type.name === 'PopoverItems')
+    .filter((node: any) => node.type.name === PopoverItems.name)
     .flatMap((node: any) => Children.toArray(node.props.children));
 
   const children = Children.toArray(props.children).filter(
-    (node: any) => node.type.name !== 'PopoverItems',
+    (node: any) => node.type.name !== PopoverItems.name,
   );
 
   useEffect(() => {
@@ -100,6 +101,6 @@ export function PopoverItems(_props: PropsWithChildren) {
   return null;
 }
 
-Popover.Items = PopoverItems;
-
-export default Popover;
+export default dynamic(() => Promise.resolve(Popover), {
+  ssr: false,
+});

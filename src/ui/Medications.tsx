@@ -16,13 +16,9 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import React, {useRef} from 'react';
+import React from 'react';
 
-import {FiLink} from 'react-icons/fi';
-
-import Github from '~/ui/Github';
-import Psychonaut from '~/ui/Psychonaut';
-import Popover from '~/ui/Popover';
+import Substance from '~/ui/Substance';
 
 import {MEDICATIONS} from '~/utils/constants';
 
@@ -35,41 +31,6 @@ function Medications() {
       {MEDICATIONS.map((medication) => (
         <Substance medication={medication} key={medication} />
       ))}
-    </div>
-  );
-}
-
-type SubstanceProps = {
-  medication: string;
-};
-
-function Substance(props: SubstanceProps): JSX.Element {
-  const {medication} = props;
-
-  const arrowRef = useRef<HTMLDivElement | null>(null);
-
-  return (
-    <div className={styles.medication}>
-      ~
-      <div
-        ref={arrowRef}
-        style={{background: '#fefefe!important'}}
-        className={styles.icon}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt={medication} src={`/${medication}.png`} />
-      </div>
-      <Popover arrowRef={arrowRef}>
-        <Popover.Items>
-          <Psychonaut username={medication} />
-          <Github username={medication} />
-        </Popover.Items>
-
-        <a href={`https://github.com/${medication}`}>
-          {medication}
-          <FiLink />
-        </a>
-      </Popover>
     </div>
   );
 }
