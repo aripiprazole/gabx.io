@@ -33,7 +33,7 @@ function Sidebar() {
             width={680}
             height={680}
             alt='Gabrielle Guimarães'
-            src='https://raw.githubusercontent.com/aripiprazole/aripiprazole/main/profile.png'
+            src='/profile.webp'
           />
         </div>
 

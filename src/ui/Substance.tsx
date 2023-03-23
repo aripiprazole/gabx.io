@@ -17,6 +17,7 @@
  */
 
 import React, {useRef} from 'react';
+import Image from 'next/image';
 
 import {FiLink} from 'react-icons/fi';
 
@@ -43,8 +44,12 @@ function Substance(props: SubstanceProps): JSX.Element {
         style={{background: '#fefefe!important'}}
         className={styles.icon}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt={medication} src={`/${medication}.png`} />
+        <Image
+          width={36}
+          height={36}
+          alt={medication}
+          src={`/${medication}.webp`}
+        />
       </div>
       <Popover arrowRef={arrowRef}>
         <PopoverItems>
