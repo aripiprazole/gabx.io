@@ -36,6 +36,7 @@ class AppDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap'
             rel='stylesheet'
           />
+          <meta name='description' content={ABOUT_ME} />
           <meta property='og:title' content={"Hi, I'm Gabi! 👋"} />
           <meta property='og:description' content={ABOUT_ME} />
           <meta
