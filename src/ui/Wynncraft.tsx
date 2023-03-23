@@ -105,10 +105,10 @@ function Wynncraft(props: Props) {
         </header>
         <main>
           <ul>
-            {user.characters.map((character) => (
-              <div key={character.type}>
+            {user.characters.map((character, i) => (
+              <li key={i}>
                 <img src={character.classImageUrl} alt={character.type} />
-              </div>
+              </li>
             ))}
           </ul>
         </main>

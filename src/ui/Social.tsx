@@ -26,7 +26,7 @@ import {SOCIAL} from '~/utils/constants';
 
 function Social() {
   return (
-    <div className={styles.container}>
+    <ul className={styles.container}>
       {SOCIAL.map(({href, username, preview, icon: Icon}) => (
         <li key={href}>
           <Popover>
@@ -41,7 +41,7 @@ function Social() {
           </Popover>
         </li>
       ))}
-    </div>
+    </ul>
   );
 }
 
