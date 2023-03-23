@@ -27,7 +27,7 @@ import {SOCIAL} from '~/utils/constants';
 function Social() {
   return (
     <ul className={styles.container}>
-      {SOCIAL.map(({href, username, preview, icon: Icon}) => (
+      {SOCIAL.map(({brand, href, username, preview, icon: Icon}) => (
         <li key={href}>
           <Popover>
             <PopoverItems>
@@ -35,7 +35,7 @@ function Social() {
                 <Preview key={key} username={username} />
               ))}
             </PopoverItems>
-            <a href={href}>
+            <a href={href} aria-label={`Go to Gabi's ${brand}`}>
               <Icon size='28px' />
             </a>
           </Popover>

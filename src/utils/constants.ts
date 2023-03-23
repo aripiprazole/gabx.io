@@ -91,48 +91,56 @@ export const PROJECTS = [
 
 export const SOCIAL = [
   {
+    brand: 'linkedin',
     href: 'https://www.linkedin.com/in/gabrielle-guimarães-1aa393233',
     username: 'gabrielle-guimarães-1aa393233',
     icon: FiLinkedin,
     preview: [],
   },
   {
+    brand: 'medium',
     href: 'https://aripiprazole.medium.com',
     username: 'aripiprazole',
     icon: TbBrandMedium,
     preview: [],
   },
   {
+    brand: 'github',
     href: 'https://github.com/aripiprazole',
     username: 'aripiprazole',
     icon: FiGithub,
     preview: [Github],
   },
   {
+    brand: 'lurasidone',
     href: 'https://gitlab.com/lurasidone',
     username: 'lurasidone',
     icon: FiGitlab,
     preview: [Gitlab],
   },
   {
+    brand: 'instagram',
     href: 'https://instagram.com/gabrielle1guim',
     username: 'gabrielle1guim',
     icon: FiInstagram,
     preview: [],
   },
   {
+    brand: 'twitter',
     href: 'https://twitter.com/algebraic_gabi',
     username: 'algebraic_gabi',
     icon: FiTwitter,
     preview: [],
   },
   {
+    brand: 'wynncraft',
     href: 'https://wynncraft.com/stats/player/Brexpiprazole',
     username: 'Brexpiprazole',
     icon: WynncraftIcon,
     preview: [Wynncraft],
   },
   {
+    brand: 'psychonaut',
     href: 'https://en.wikipedia.org/wiki/Aripiprazole',
     username: 'Aripiprazole',
     icon: GiChemicalDrop,
