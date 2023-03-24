@@ -18,7 +18,7 @@
 
 import React from 'react';
 
-type Props = React.HTMLProps<HTMLDivElement> & {
+type Props = any & {
   size: any;
 };
 
