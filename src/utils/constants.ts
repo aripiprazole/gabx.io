@@ -178,4 +178,14 @@ export const ARTICLES = [
     href: 'https://aripiprazole.medium.com/rebasing-old-commits-for-trans-people-3740d1bc1157',
     icon: FiBook,
   },
+  {
+    title: 'Writing Haskell in Kotlin',
+    description:
+      'Talks about implementing a Haskell-like interpreter in Kotlin. ' +
+      'That comes from writing the parser, type system, context resolving to ' +
+      'the interpreter. The goal of this article, is to show a short ' +
+      'introduction to compilers... (STILL INCOMPLETE)',
+    href: 'https://whik.devgabi.me',
+    icon: FiBook,
+  },
 ];
