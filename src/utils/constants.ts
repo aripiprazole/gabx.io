@@ -27,6 +27,8 @@ import {
 } from 'react-icons/fi';
 import {TbBrandMedium} from 'react-icons/tb';
 import {GiChemicalDrop} from 'react-icons/gi';
+import {BsBlockquoteLeft} from 'react-icons/bs';
+import {SiBlueprint} from 'react-icons/si';
 
 import Github from '~/ui/Github';
 import Gitlab from '~/ui/Gitlab';
@@ -34,6 +36,7 @@ import Wynncraft from '~/ui/Wynncraft';
 import Psychonaut from '~/ui/Psychonaut';
 
 import WynncraftIcon from '~/assets/WynncraftIcon';
+import LambdaIcon from '~/assets/LambdaIcon';
 
 export const ABOUT_ME =
   'My name is Gabrielle and I am a 17-year-old ' +
@@ -75,7 +78,7 @@ export const PROJECTS = [
       'simplicity and ease of use. Plank is a statically typed language ' +
       'with a syntax similar to Kotlin, and a compiler written in Kotlin...',
     href: 'https://github.com/aripiprazole/plank',
-    icon: FiTerminal,
+    icon: LambdaIcon,
   },
   {
     title: 'Andesite',
@@ -85,7 +88,7 @@ export const PROJECTS = [
       'the protocol, like a minecraft server with void, ' +
       'or even a proxy...',
     href: 'https://github.com/aripiprazole/andesite',
-    icon: FiTerminal,
+    icon: FiBook,
   },
 ];
 
@@ -166,7 +169,7 @@ export const ARTICLES = [
       'like LLVM, C, or even directly on Machine Code. For this task, ' +
       'we can use Closure...',
     href: 'https://aripiprazole.medium.com/defunctionalization-5fd03b21813e',
-    icon: FiBook,
+    icon: LambdaIcon,
   },
   {
     title: 'Rebasing old commits for trans people',
@@ -176,7 +179,7 @@ export const ARTICLES = [
       'to present some techniques to rebase your old commits into ' +
       'new ones with your real name...',
     href: 'https://aripiprazole.medium.com/rebasing-old-commits-for-trans-people-3740d1bc1157',
-    icon: FiBook,
+    icon: BsBlockquoteLeft,
   },
   {
     title: 'Writing Haskell in Kotlin',
@@ -186,6 +189,6 @@ export const ARTICLES = [
       'the interpreter. The goal of this article, is to show a short ' +
       'introduction to compilers... (STILL INCOMPLETE)',
     href: 'https://whik.devgabi.me',
-    icon: FiBook,
+    icon: LambdaIcon,
   },
 ];

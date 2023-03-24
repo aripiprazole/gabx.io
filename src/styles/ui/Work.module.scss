@@ -57,6 +57,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: revert;
-  min-width: 6.25rem;
+  aspect-ratio: 1 / 1;
+  height: 6.8rem;
 }

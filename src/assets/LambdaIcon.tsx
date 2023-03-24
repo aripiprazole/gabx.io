@@ -18,38 +18,29 @@
 
 import React from 'react';
 
-import {FiExternalLink} from 'react-icons/fi';
-import {IconType} from 'react-icons';
-
-import styles from '~/styles/ui/Work.module.scss';
-
-type Props = {
-  title: string;
-  description: string;
-  href: string;
-  icon: IconType;
+type Props = React.HTMLProps<HTMLDivElement> & {
+  size: any;
 };
 
-function Work(props: Props) {
-  const {title, description, href, icon: Icon} = props;
+function LambdaIcon(props: Props) {
+  const {size, ...divProps} = props;
 
   return (
-    <article className={styles.work}>
-      <div className={styles.icon}>
-        <div>
-          <Icon size={34} />
-        </div>
-      </div>
-      <main>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <a className={styles.readMore} href={href}>
-          <FiExternalLink />
-          Read more
-        </a>
-      </main>
-    </article>
+    <div
+      style={{
+        width: size ?? '28px',
+        height: size ?? '28px',
+        display: 'flex',
+        fontSize: size ?? '24px',
+        fontWeight: 'bolder',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+      {...divProps}
+    >
+      <span>λ</span>
+    </div>
   );
 }
 
-export default Work;
+export default LambdaIcon;
