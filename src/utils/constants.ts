@@ -120,8 +120,8 @@ export const SOCIAL = [
   },
   {
     brand: 'instagram',
-    href: 'https://instagram.com/gabrielle1guim',
-    username: 'gabrielle1guim',
+    href: 'https://instagram.com/algebraic.gabi',
+    username: 'algebraic.gabi',
     icon: FiInstagram,
     preview: [],
   },
