@@ -22,13 +22,11 @@ import {
   FiGitlab,
   FiInstagram,
   FiLinkedin,
-  FiTerminal,
   FiTwitter,
 } from 'react-icons/fi';
 import {TbBrandMedium} from 'react-icons/tb';
 import {GiChemicalDrop} from 'react-icons/gi';
 import {BsBlockquoteLeft} from 'react-icons/bs';
-import {SiBlueprint} from 'react-icons/si';
 
 import Github from '~/ui/Github';
 import Gitlab from '~/ui/Gitlab';
