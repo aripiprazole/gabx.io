@@ -35,6 +35,7 @@ function LambdaIcon(props: Props) {
         fontWeight: 'bolder',
         alignItems: 'center',
         justifyContent: 'center',
+        userSelect: 'none',
       }}
       {...divProps}
     >
