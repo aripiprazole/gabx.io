@@ -93,7 +93,7 @@ export const PROJECTS = [
 export const SOCIAL = [
   {
     brand: 'linkedin',
-    href: 'https://www.linkedin.com/in/gabrielle-guimarães-1aa393233',
+    href: 'https://www.linkedin.com/in/aripiprazole',
     username: 'gabrielle-guimarães-1aa393233',
     icon: FiLinkedin,
     preview: [],
