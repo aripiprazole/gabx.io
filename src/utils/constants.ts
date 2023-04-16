@@ -67,7 +67,7 @@ export const MEDICATIONS = [
   ['atomoxetine'],
   ['lurasidone'],
   ['oestradiol'],
-  ['clhopromazine', 'clorpromazina'],
+  ['clhorpromazine', 'clorpromazina'],
 ];
 
 export const PROJECTS = [
