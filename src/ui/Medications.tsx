@@ -28,8 +28,12 @@ function Medications() {
   return (
     <div className={styles.container}>
       <h3>Meet the other compounds! 🙂</h3>
-      {MEDICATIONS.map((medication) => (
-        <Substance medication={medication} key={medication} />
+      {MEDICATIONS.map(([medication, username = medication]) => (
+        <Substance
+          medication={medication}
+          username={username}
+          key={medication}
+        />
       ))}
     </div>
   );

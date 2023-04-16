@@ -29,10 +29,11 @@ import styles from '~/styles/ui/Medications.module.scss';
 
 type SubstanceProps = {
   medication: string;
+  username: string;
 };
 
 function Substance(props: SubstanceProps): JSX.Element {
-  const {medication} = props;
+  const {medication, username} = props;
 
   const arrowRef = useRef<HTMLDivElement | null>(null);
 
@@ -57,7 +58,7 @@ function Substance(props: SubstanceProps): JSX.Element {
           <Github username={medication} />
         </PopoverItems>
 
-        <a href={`https://github.com/${medication}`}>
+        <a href={`https://github.com/${username}`}>
           {medication}
           <FiLink />
         </a>

@@ -62,10 +62,12 @@ export const ABOUT_PROJECTS =
 export const MOMENTUM_EASE = 0.175;
 
 export const MEDICATIONS = [
-  'aripiprazole',
-  'arketamine',
-  'atomoxetine',
-  'lurasidone',
+  ['aripiprazole'],
+  ['arketamine'],
+  ['atomoxetine'],
+  ['lurasidone'],
+  ['oestradiol'],
+  ['clhopromazine', 'clorpromazina'],
 ];
 
 export const PROJECTS = [
