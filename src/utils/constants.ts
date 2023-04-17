@@ -68,6 +68,7 @@ export const MEDICATIONS = [
   ['lurasidone'],
   ['oestradiol'],
   ['clhorpromazine', 'clorpromazina'],
+  ['algebraic-sofia ❤️️', 'algebraic-sofia'],
 ];
 
 export const PROJECTS = [
