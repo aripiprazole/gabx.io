@@ -91,6 +91,16 @@ export const PROJECTS = [
     href: 'https://github.com/aripiprazole/andesite',
     icon: FiBook,
   },
+  {
+    title: 'Trazodone',
+    description:
+      'A LLVM backend for HVM that runs just-in-time ' +
+      'compilation, and abstract the codegen into multiple steps ' +
+      'to be easy to generate LLVM, Rust, or any target, ' +
+      'and has a built-in evaluator...',
+    href: 'https://github.com/aripiprazole/trazodonet ',
+    icon: FiBook,
+  },
 ];
 
 export const SOCIAL = [
