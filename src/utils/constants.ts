@@ -68,7 +68,7 @@ export const MEDICATIONS = [
   ['lurasidone'],
   ['oestradiol'],
   ['clhorpromazine', 'clorpromazina'],
-  ['algebraic-sofia ❤️️', 'algebraic-sofia'],
+  ['algebraic-sofia', 'algebraic-sofia'],
 ];
 
 export const PROJECTS = [
@@ -99,7 +99,7 @@ export const PROJECTS = [
       'to be easy to generate LLVM, Rust, or any target, ' +
       'and has a built-in evaluator...',
     href: 'https://github.com/aripiprazole/trazodonet ',
-    icon: FiBook,
+    icon: LambdaIcon,
   },
 ];
 
