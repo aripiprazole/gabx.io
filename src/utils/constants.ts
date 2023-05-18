@@ -98,7 +98,7 @@ export const PROJECTS = [
       'compilation, and abstract the codegen into multiple steps ' +
       'to be easy to generate LLVM, Rust, or any target, ' +
       'and has a built-in evaluator...',
-    href: 'https://github.com/aripiprazole/trazodonet ',
+    href: 'https://github.com/aripiprazole/trazodone',
     icon: LambdaIcon,
   },
 ];
