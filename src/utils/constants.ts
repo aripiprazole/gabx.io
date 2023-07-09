@@ -82,16 +82,6 @@ export const PROJECTS = [
     icon: LambdaIcon,
   },
   {
-    title: 'Andesite',
-    description:
-      'A library for Minecraft protocol development that ' +
-      'makes easier to develop servers and stuff directly with ' +
-      'the protocol, like a minecraft server with void, ' +
-      'or even a proxy...',
-    href: 'https://github.com/aripiprazole/andesite',
-    icon: FiBook,
-  },
-  {
     title: 'Trazodone',
     description:
       'A LLVM backend for HVM that runs just-in-time ' +
@@ -112,6 +102,16 @@ export const PROJECTS = [
       'incremental compilers and package-managers.',
     href: 'https://github.com/aripiprazole/asena',
     icon: LambdaIcon,
+  },
+  {
+    title: 'Andesite',
+    description:
+      'A library for Minecraft protocol development that ' +
+      'makes easier to develop servers and stuff directly with ' +
+      'the protocol, like a minecraft server with void, ' +
+      'or even a proxy...',
+    href: 'https://github.com/aripiprazole/andesite',
+    icon: FiBook,
   },
 ];
 
