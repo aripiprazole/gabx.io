@@ -101,13 +101,25 @@ export const PROJECTS = [
     href: 'https://github.com/aripiprazole/trazodone',
     icon: LambdaIcon,
   },
+  {
+    title: 'Asena',
+    description:
+      'Incremental/single-pass based compiler,' +
+      'the API can be either used for Single-Pass Compiling' +
+      'and for building LSP, or' +
+      'things that would need incremental pipelines. ' +
+      "It's a study project of mine for studying " +
+      'incremental compilers and package-managers.',
+    href: 'https://github.com/aripiprazole/asena',
+    icon: LambdaIcon,
+  },
 ];
 
 export const SOCIAL = [
   {
     brand: 'linkedin',
     href: 'https://www.linkedin.com/in/aripiprazole',
-    username: 'gabrielle-guimarães-1aa393233',
+    username: 'aripiprazole',
     icon: FiLinkedin,
     preview: [],
   },
