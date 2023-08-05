@@ -222,7 +222,7 @@ export const ARTICLES = [
       'That comes from writing the parser, type system, context resolving to ' +
       'the interpreter. The goal of this article, is to show a short ' +
       'introduction to compilers... (STILL INCOMPLETE)',
-    href: 'https://whik.devgabi.me',
+    href: 'https://github.com/aripiprazole/ekko/tree/main/docs',
     icon: LambdaIcon,
   },
 ];
