@@ -23,6 +23,7 @@ import {
   FiInstagram,
   FiLinkedin,
   FiTwitter,
+  FiCpu,
 } from 'react-icons/fi';
 import {TbBrandMedium} from 'react-icons/tb';
 import {GiChemicalDrop} from 'react-icons/gi';
@@ -203,6 +204,16 @@ export const ARTICLES = [
       'new ones with your real name...',
     href: 'https://aripiprazole.medium.com/rebasing-old-commits-for-trans-people-3740d1bc1157',
     icon: BsBlockquoteLeft,
+  },
+  {
+    title: 'Writing an Equation Solver',
+    description:
+      'Writing an Equation Solver is a process that is made of: parsing, ' +
+      'equating/unifying and rewriting.' +
+      'It is a powerful project that allows us to learn more about logic ' +
+      'and functional programming.',
+    href: 'https://github.com/aripiprazole/eq',
+    icon: FiCpu,
   },
   {
     title: 'Writing Haskell in Kotlin',
