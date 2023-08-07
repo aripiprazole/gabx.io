@@ -18,32 +18,32 @@
 
 import React from 'react';
 
-import Sidebar from '~/ui/Sidebar';
-import Scroll from '~/ui/Scroll';
-
-import styles from '~/styles/ui/Root.module.scss';
-import {ThemeProvider} from '~/ui/Theme';
-
-type Props = {
-  isMobile: boolean;
-  children: React.ReactNode;
+type Props = any & {
+  size: any;
 };
 
-function Root(props: Props) {
-  const {isMobile, children} = props;
+function LambdaIcon(props: Props) {
+  const {size, ...divProps} = props;
 
   return (
-    <ThemeProvider>
-      <Scroll isMobile={isMobile}>
-        <div className={styles.container}>
-          <main className={styles.main}>
-            <Sidebar />
-            <div className={styles.content}>{children}</div>
-          </main>
-        </div>
-      </Scroll>
-    </ThemeProvider>
+    <div
+      style={{
+        width: size ?? '28px',
+        height: size ?? '28px',
+        display: 'flex',
+        fontSize: size ?? '24px',
+        fontWeight: 'bolder',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: '8px',
+        border: '#fefefe 2px solid !important',
+        userSelect: 'none',
+      }}
+      {...divProps}
+    >
+      <span> </span>
+    </div>
   );
 }
 
-export default Root;
+export default LambdaIcon;

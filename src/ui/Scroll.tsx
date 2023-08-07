@@ -29,7 +29,11 @@ function Scroll(props: Props & {isMobile: boolean}) {
 
   if (isMobile) return <>{props.children}</>;
 
-  return <ScrollImpl {...divProps} />;
+  return (
+    <div id='root'>
+      <ScrollImpl {...divProps} />
+    </div>
+  );
 }
 
 function ScrollImpl(props: Props) {

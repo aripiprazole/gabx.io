@@ -36,6 +36,7 @@ import Psychonaut from '~/ui/Psychonaut';
 
 import WynncraftIcon from '~/assets/WynncraftIcon';
 import LambdaIcon from '~/assets/LambdaIcon';
+import BlueSkyIcon from '~/assets/BlueSkyIcon';
 
 export const ABOUT_ME =
   'My name is Gabrielle and I am a 17-year-old ' +
@@ -172,6 +173,13 @@ export const SOCIAL = [
     username: 'Aripiprazole',
     icon: GiChemicalDrop,
     preview: [Psychonaut],
+  },
+  {
+    brand: 'bluesky',
+    href: 'https://bsky.app/profile/aripiprazole.dev',
+    username: 'aripiprazole.dev',
+    icon: BlueSkyIcon,
+    preview: [],
   },
 ];
 
