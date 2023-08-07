@@ -22,7 +22,7 @@ type Props = any & {
   size: any;
 };
 
-function LambdaIcon(props: Props) {
+function BlueSkyIcon(props: Props) {
   const {size, ...divProps} = props;
 
   return (
@@ -36,7 +36,7 @@ function LambdaIcon(props: Props) {
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: '8px',
-        border: '#fefefe 2px solid !important',
+        border: '#fefefe 2px solid',
         userSelect: 'none',
       }}
       {...divProps}
@@ -46,4 +46,4 @@ function LambdaIcon(props: Props) {
   );
 }
 
-export default LambdaIcon;
+export default BlueSkyIcon;
