@@ -100,7 +100,7 @@ export const PROJECTS = [
       'the API can be either used for Single-Pass Compiling' +
       'and for building LSP, or' +
       'things that would need incremental pipelines. ' +
-      "It's a study project of mine for studying " +
+      'Its a study project of mine for studying ' +
       'incremental compilers and package-managers.',
     href: 'https://github.com/aripiprazole/asena',
     icon: LambdaIcon,
@@ -222,6 +222,16 @@ export const ARTICLES = [
       'and functional programming.',
     href: 'https://github.com/aripiprazole/eq',
     icon: FiCpu,
+  },
+  {
+    title: ' GADT-like types in Rust',
+    description:
+      'I think that GADTs are a very powerful feature of Haskell, ' +
+      'and I would like to' +
+      'have something similar in Rust. I think this is the closest' +
+      'thing to GADTs in Rust.',
+    href: 'https://dev.to/aripiprazole/gadt-like-types-in-rust-4hcp',
+    icon: LambdaIcon,
   },
   {
     title: 'Writing Haskell in Kotlin',
