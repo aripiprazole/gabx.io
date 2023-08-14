@@ -224,6 +224,18 @@ export const ARTICLES = [
     icon: FiCpu,
   },
   {
+    title:
+      'Driving Complete and Easy Bidirectional Typechecking ' +
+      'for Higher-Rank Polymorphism in Rust ',
+    description:
+      'The main goal of this article is making some comments about ' +
+      'mb64 implementation of the Complete and Easy.. paper, ' +
+      'but implementing it in pure rust code, and some optimizations, ' +
+      'like de bruijin levels and indexes!',
+    href: 'https://dev.to/aripiprazole/driving-complete-and-easy-bidirectional-typechecking-for-higher-rank-polymorphism-in-rust-4856',
+    icon: LambdaIcon,
+  },
+  {
     title: ' GADT-like types in Rust',
     description:
       'I think that GADTs are a very powerful feature of Haskell, ' +
