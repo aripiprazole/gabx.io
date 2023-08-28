@@ -68,6 +68,7 @@ export const MEDICATIONS = [
   ['atomoxetine'],
   ['lurasidone'],
   ['oestradiol'],
+  ['perospirone'],
   ['algebraic-sofia', 'algebraic-sofia'],
 ];
 
