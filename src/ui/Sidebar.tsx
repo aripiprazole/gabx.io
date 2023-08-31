@@ -30,7 +30,7 @@ function Sidebar() {
       <div className={styles.wrapper}>
         <div className={styles.profile}>
           <Image
-            loading='eager'
+            loading={process.env.NODE_ENV === 'production' ? 'eager' : 'lazy'}
             width={680}
             height={680}
             alt='Gabrielle Guimarães'
