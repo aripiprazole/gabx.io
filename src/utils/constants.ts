@@ -65,11 +65,10 @@ export const MOMENTUM_EASE = 0.175;
 
 export const MEDICATIONS = [
   ['aripiprazole'],
-  ['arketamine'],
   ['atomoxetine'],
   ['lurasidone'],
   ['oestradiol'],
-  ['clhorpromazine', 'clorpromazina'],
+  ['perospirone'],
   ['algebraic-sofia', 'algebraic-sofia'],
 ];
 
