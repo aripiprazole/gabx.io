@@ -23,7 +23,8 @@ import {
   FiInstagram,
   FiLinkedin,
   FiTwitter,
-  FiCpu, FiStar,
+  FiCpu,
+  FiStar,
 } from 'react-icons/fi';
 import {TbBrandMedium} from 'react-icons/tb';
 import {GiChemicalDrop} from 'react-icons/gi';
