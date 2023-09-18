@@ -23,7 +23,7 @@ import {
   FiInstagram,
   FiLinkedin,
   FiTwitter,
-  FiCpu,
+  FiCpu, FiStar,
 } from 'react-icons/fi';
 import {TbBrandMedium} from 'react-icons/tb';
 import {GiChemicalDrop} from 'react-icons/gi';
@@ -100,7 +100,7 @@ export const PROJECTS = [
       'and for building LSP, or' +
       'things that would need incremental pipelines. ' +
       'Its a study project of mine for studying ' +
-      'incremental compilers and package-managers.',
+      'incremental compilers and package-managers...',
     href: 'https://github.com/aripiprazole/asena',
     icon: LambdaIcon,
   },
@@ -113,6 +113,16 @@ export const PROJECTS = [
       'or even a proxy...',
     href: 'https://github.com/aripiprazole/andesite',
     icon: FiBook,
+  },
+  {
+    title: 'Bupropion',
+    description:
+      'Bupropion is a library based on Miette error handling that ' +
+      'provides a way to handle errors in a functional way, ' +
+      'and it is very similar to Rust error handling and Ariadne too. ' +
+      'It is a beautiful way to present your errors...',
+    href: 'https://crates.io/crates/bupropion',
+    icon: FiStar,
   },
 ];
 
