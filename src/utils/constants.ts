@@ -110,7 +110,7 @@ export const PROJECTS = [
     description:
       'The Lura compiler is the continuation of Asena, ' +
       'it aims an incremental and query-based compiler ' +
-      'with focus in a new tooling toolkit.'
+      'with focus in a new tooling toolkit.',
     href: 'https://lurasidone.vercel.app',
     icon: LambdaIcon,
   },
