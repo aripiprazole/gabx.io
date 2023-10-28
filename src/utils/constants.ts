@@ -106,6 +106,15 @@ export const PROJECTS = [
     icon: LambdaIcon,
   },
   {
+    title: 'Lura',
+    description:
+      'The Lura compiler is the continuation of Asena, ' +
+      'it aims an incremental and query-based compiler ' +
+      'with focus in a new tooling toolkit.'
+    href: 'https://lurasidone.vercel.app',
+    icon: LambdaIcon,
+  },
+  {
     title: 'Andesite',
     description:
       'A library for Minecraft protocol development that ' +
