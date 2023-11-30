@@ -70,7 +70,6 @@ export const MEDICATIONS = [
   ['lurasidone'],
   ['oestradiol'],
   ['perospirone'],
-  ['algebraic-sofia', 'algebraic-sofia'],
 ];
 
 export const PROJECTS = [
