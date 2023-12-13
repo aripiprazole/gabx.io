@@ -40,7 +40,7 @@ import LambdaIcon from '~/assets/LambdaIcon';
 import BlueSkyIcon from '~/assets/BlueSkyIcon';
 
 export const ABOUT_ME =
-  'My name is Gabrielle and I am a 17-year-old ' +
+  'My name is Gabrielle and I am a 18-year-old ' +
   'software engineer with a passion for functional programming ' +
   'and the Kotlin programming language. In my free time, I enjoy ' +
   'playing Minecraft and working on projects related to compilers. ' +
