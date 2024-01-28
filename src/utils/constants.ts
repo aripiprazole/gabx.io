@@ -67,7 +67,6 @@ export const MOMENTUM_EASE = 0.175;
 export const MEDICATIONS = [
   ['aripiprazole'],
   ['atomoxetine'],
-  ['lurasidone'],
   ['oestradiol'],
   ['perospirone'],
 ];
