@@ -37,10 +37,9 @@ import Psychonaut from '~/ui/Psychonaut';
 
 import WynncraftIcon from '~/assets/WynncraftIcon';
 import LambdaIcon from '~/assets/LambdaIcon';
-import BlueSkyIcon from '~/assets/BlueSkyIcon';
 
 export const ABOUT_ME =
-  'My name is Gabrielle and I am a 18-year-old ' +
+  'My name is Gabrielle and I am a 19-year-old ' +
   'software engineer with a passion for functional programming ' +
   'and the Kotlin programming language. In my free time, I enjoy ' +
   'playing Minecraft and working on projects related to compilers. ' +
@@ -191,13 +190,6 @@ export const SOCIAL = [
     icon: GiChemicalDrop,
     preview: [Psychonaut],
   },
-  {
-    brand: 'bluesky',
-    href: 'https://bsky.app/profile/aripiprazole.dev',
-    username: 'aripiprazole.dev',
-    icon: BlueSkyIcon,
-    preview: [],
-  },
 ];
 
 export const ARTICLES = [
@@ -221,12 +213,11 @@ export const ARTICLES = [
     icon: LambdaIcon,
   },
   {
-    title: 'Rebasing old commits for trans people',
+    title: 'Rebasing old commits for people who has changed their name',
     description:
-      'Hello, my name is Gabrielle, and I’m a transgender person, ' +
-      'so it does mean that I changed my name, so here I want ' +
+      'Hello, my name is Gabrielle, and I’ve changed my name, so here I want ' +
       'to present some techniques to rebase your old commits into ' +
-      'new ones with your real name...',
+      'new ones with your new name...',
     href: 'https://aripiprazole.medium.com/rebasing-old-commits-for-trans-people-3740d1bc1157',
     icon: BsBlockquoteLeft,
   },
@@ -245,7 +236,7 @@ export const ARTICLES = [
       'Driving Complete and Easy Bidirectional Typechecking ' +
       'for Higher-Rank Polymorphism in Rust ',
     description:
-      'The main goal of this article is making some comments about ' +
+      'The main goal of this article is to make some comments about ' +
       'mb64 implementation of the Complete and Easy.. paper, ' +
       'but implementing it in pure rust code, and some optimizations, ' +
       'like de bruijin levels and indexes!',
